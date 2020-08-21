@@ -2,11 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function App() {
+export default function Welcome() {
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
-     <Image source={require("./assets/images/sakar_logo.png")} resizeMode='contain' />
+     <Image source={require("../assets/images/sakar_logo.png")} resizeMode='contain' />
      </View>
      <Text style={styles.motto}>#MakeYourDreamSakar</Text>
     </View>

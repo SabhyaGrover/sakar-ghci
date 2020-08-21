@@ -2,32 +2,30 @@ import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+import Welcome from './screens/Welcome';
+import { NavigationContainer } from '@react-navigation/native';
+import { render } from 'react-dom';
+
+import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createStackNavigator();
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.logo}>
-     <Image source={require("./assets/images/sakar_logo.png")} resizeMode='contain' />
-     </View>
-     <Text style={styles.motto}>#MakeYourDreamSakar</Text>
-    </View>
+          
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={Welcome}
+              options={{ title: 'Welcome' }}
+            />
+            </Stack.Navigator>
+            </NavigationContainer>
+   
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor: '#fff',
 
-  },
-  logo: {
-    width: undefined,
-    height: '80%'
-  },
-  moto:{
-    textAlign:'center',
-    fontWeight:'bold',
-  }
-});
+
+ 
+  
