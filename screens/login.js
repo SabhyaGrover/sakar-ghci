@@ -1,8 +1,8 @@
  
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
-export default class App extends React.Component {
+export default class login extends React.Component {
   state={
     email:"",
     password:""
@@ -11,13 +11,13 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
-     <Image source={require("../assets/images/sakar_logo.png")} resizeMode='contain' />
+     <Image source={require("../assets/images/sakar_logo.png")} resizeMode='cover' />
      </View>
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
             placeholder="Email..." 
-            placeholderTextColor="#003f5c"
+            placeholderTextColor="white"
             onChangeText={text => this.setState({email:text})}/>
         </View>
         <View style={styles.inputView} >
@@ -25,7 +25,7 @@ export default class App extends React.Component {
             secureTextEntry
             style={styles.inputText}
             placeholder="Password..." 
-            placeholderTextColor="#003f5c"
+            placeholderTextColor="white"
             onChangeText={text => this.setState({password:text})}/>
         </View>
         <TouchableOpacity>
@@ -35,7 +35,7 @@ export default class App extends React.Component {
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.loginText}>Signup</Text>
+          <Text style={styles.Text}>Signup</Text>
         </TouchableOpacity>
 
   
@@ -47,19 +47,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#003f5c',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo:{
-    fontWeight:"bold",
-    fontSize:50,
-    color:"#fb5b5a",
-    marginBottom:40
-  },
+  
   inputView:{
     width:"80%",
-    backgroundColor:"#465881",
+    backgroundColor:"#e1bee7",
     borderRadius:25,
     height:50,
     marginBottom:20,
@@ -68,15 +63,15 @@ const styles = StyleSheet.create({
   },
   inputText:{
     height:50,
-    color:"white"
+    color:"#403B34"
   },
   forgot:{
-    color:"white",
+    color:"#403B34",
     fontSize:11
   },
   loginBtn:{
     width:"80%",
-    backgroundColor:"#fb5b5a",
+    backgroundColor:"#3f51b5",
     borderRadius:25,
     height:50,
     alignItems:"center",
@@ -86,5 +81,15 @@ const styles = StyleSheet.create({
   },
   loginText:{
     color:"white"
+  },
+  Text:{
+    color:"#403B34"
   }
-});
+  
+}
+
+);
+
+
+
+
