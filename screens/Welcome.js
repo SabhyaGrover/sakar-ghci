@@ -8,7 +8,7 @@ export default function Welcome() {
       <View style={styles.logo}>
      <Image source={require("../assets/images/sakar_logo.png")} resizeMode='contain' />
      </View>
-     <Text style={styles.motto}>#MakeYourDreamSakar</Text>
+     <Text style={styles.motto}>#MakeYourDreamSaakar</Text>
     </View>
   );
 }
