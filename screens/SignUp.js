@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
+
 import IoniconsIcon from "react-native-vector-icons/Ionicons";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
@@ -20,8 +21,6 @@ function SignUp(props) {
       <View style={styles.background}>
         <ImageBackground
           style={styles.rect2}
-          imageStyle={styles.rect2_imageStyle}
-          source={require("../assets/images/Gradient_S4Bc4Vq.png")}
         >
           <View style={styles.progressBarColumn}>
             <View style={styles.progressBar}>
@@ -40,6 +39,7 @@ function SignUp(props) {
                 style={styles.icon4}
               ></FontAwesomeIcon>
             </View>
+               
             <Text style={styles.text3}>CREATE ACCOUNT</Text>
             <View style={styles.form}>
               <View style={styles.nameColumn}>
@@ -62,7 +62,7 @@ function SignUp(props) {
                   ></EvilIconsIcon>
                   <TextInput
                     placeholder="Email"
-                    placeholderTextColor="rgba(255,255,255,1)"
+                    placeholderTextColor="white"
                     secureTextEntry={false}
                     style={styles.emailInput}
                   ></TextInput>
@@ -73,7 +73,7 @@ function SignUp(props) {
                 <EvilIconsIcon name="lock" style={styles.icon7}></EvilIconsIcon>
                 <TextInput
                   placeholder="Password"
-                  placeholderTextColor="rgba(255,255,255,1)"
+                  placeholderTextColor="white"
                   secureTextEntry={true}
                   style={styles.passwordInput}
                 ></TextInput>
@@ -97,6 +97,7 @@ function SignUp(props) {
 }
 
 const styles = StyleSheet.create({
+
   root: {
     flex: 1,
     backgroundColor: "rgb(255,255,255)"
@@ -105,7 +106,8 @@ const styles = StyleSheet.create({
     flex: 1
   },
   rect2: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "white"
   },
   rect2_imageStyle: {},
   progressBar: {
@@ -115,7 +117,7 @@ const styles = StyleSheet.create({
     marginRight: 28
   },
   icon2: {
-    color: "rgba(30,174,199,1)",
+    color: "#e1bee7",
     fontSize: 40,
     width: 33,
     height: 40
@@ -123,13 +125,14 @@ const styles = StyleSheet.create({
   rect4: {
     width: 50,
     height: 7,
-    backgroundColor: "rgba(31,178,204,1)",
+    backgroundColor: "#3f51b5",
     borderRadius: 40,
     marginLeft: 6,
     marginTop: 16
   },
+  
   icon3: {
-    color: "#1fb2cc",
+    color: "#e1bee7",
     fontSize: 35,
     width: 40,
     height: 36,
@@ -139,7 +142,7 @@ const styles = StyleSheet.create({
   rect5: {
     width: 50,
     height: 7,
-    backgroundColor: "rgba(230, 230, 230,1)",
+    backgroundColor: "#3f51b5",
     opacity: 0.75,
     borderRadius: 40,
     marginTop: 16
@@ -153,14 +156,14 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   icon4: {
-    color: "rgba(255,255,255,1)",
+    color: "#e1bee7",
     fontSize: 40,
     width: 34,
     height: 40,
     opacity: 0.75
   },
   text3: {
-    color: "rgba(255,255,255,1)",
+    color: "purple",
     fontSize: 24,
     marginTop: 67,
     alignSelf: "center"
@@ -171,12 +174,12 @@ const styles = StyleSheet.create({
   },
   name: {
     height: 59,
-    backgroundColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "#e1bee7",
     borderRadius: 5,
     flexDirection: "row"
   },
   icon5: {
-    color: "rgba(255,255,255,1)",
+    color: "white",
     fontSize: 33,
     width: 33,
     height: 33,
@@ -185,7 +188,7 @@ const styles = StyleSheet.create({
   },
   nameInput: {
     height: 30,
-    color: "rgba(255,255,255,1)",
+    color: "white",
     fontSize: 14,
     flex: 1,
     marginRight: 17,
@@ -194,20 +197,20 @@ const styles = StyleSheet.create({
   },
   email: {
     height: 59,
-    backgroundColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "#e1bee7",
     borderRadius: 5,
     flexDirection: "row",
     marginTop: 27
   },
   icon6: {
-    color: "rgba(255,255,255,1)",
+    color: "white",
     fontSize: 33,
     marginLeft: 15,
     alignSelf: "center"
   },
   emailInput: {
     height: 30,
-    color: "rgba(255,255,255,1)",
+    color: "white",
     flex: 1,
     marginRight: 17,
     marginLeft: 13,
@@ -219,19 +222,19 @@ const styles = StyleSheet.create({
   },
   password: {
     height: 59,
-    backgroundColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "#e1bee7",
     borderRadius: 5,
     flexDirection: "row"
   },
   icon7: {
-    color: "rgba(255,255,255,1)",
+    color: "white",
     fontSize: 33,
     marginLeft: 15,
     marginTop: 13
   },
   passwordInput: {
     height: 30,
-    color: "rgba(255,255,255,1)",
+    color: "white",
     flex: 1,
     marginRight: 17,
     marginLeft: 13,
@@ -247,7 +250,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 55,
-    backgroundColor: "rgba(247,247,247,0)",
+    backgroundColor: "#3f51b5",
     borderRadius: 5,
     borderColor: "rgba(255,255,255,1)",
     borderWidth: 1,
@@ -256,11 +259,11 @@ const styles = StyleSheet.create({
   },
   text2: {
     width: 66,
-    color: "rgba(255,255,255,1)",
+    color: "#403B34",
     alignSelf: "center"
   },
   text4: {
-    color: "rgba(255,255,255,0.5)",
+    color: "#403B34",
     alignSelf: "center"
   },
   buttonColumn: {
