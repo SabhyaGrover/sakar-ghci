@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 import Welcome from './screens/Welcome';
 import login from './screens/login';
+import todo from './screens/todo';
 import { NavigationContainer } from '@react-navigation/native';
 import { render } from 'react-dom';
 
@@ -17,9 +18,9 @@ export default function App() {
           <Stack.Navigator>
             
              <Stack.Screen
-              name="login"
-              component={login}
-              options={{ title: 'login' }}
+              name="todo"
+              component={todo}
+              options={{ title: 'todo' }}
             />
             </Stack.Navigator>
             </NavigationContainer>
