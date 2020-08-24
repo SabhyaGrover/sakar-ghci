@@ -4,28 +4,22 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 import Welcome from './screens/Welcome';
 import login from './screens/login';
-import todo from './screens/todo';
+import Todo from './screens/Todo';
+import SignUp from './screens/SignUp';
 import { NavigationContainer } from '@react-navigation/native';
 import { render } from 'react-dom';
-
 import { createStackNavigator } from '@react-navigation/stack';
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
 export default function App() {
   return (       
-    
-        <NavigationContainer>
-          <Stack.Navigator>
-            
-             <Stack.Screen
-              name="todo"
-              component={todo}
-              options={{ title: 'todo' }}
-            />
-            </Stack.Navigator>
-            </NavigationContainer>
-            
-   
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name = 'login' component = { login } />
+        <Stack.Screen name = 'SignUp' component = { SignUp } />
+        <Stack.Screen name = 'Todo' component ={ Todo } />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
