@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,1)"
   },
   loremIpsum: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 28,
     marginTop: 2
