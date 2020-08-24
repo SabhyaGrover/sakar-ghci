@@ -8,25 +8,20 @@ import Todo from './screens/Todo';
 import SignUp from './screens/SignUp';
 import { NavigationContainer } from '@react-navigation/native';
 import { render } from 'react-dom';
-export { default as SignUp } from "./screens/SignUp.js";
 import { createStackNavigator } from '@react-navigation/stack';
-const Stack = createStackNavigator();
+const RootStack = createStackNavigator(
+  {
+    LogIn: { screen: login},
+    SignUp: { screen: SignUp},
+  },
+  {
+    initialRouteName:'LogIn'
+  }
+);
 
 export default function App() {
   return (       
-    
-        <NavigationContainer>
-          <Stack.Navigator>
-            
-             <Stack.Screen
-              name="SignUp"
-              component={SignUp}
-              options={{ title: 'SignUp' }}
-            />
-            </Stack.Navigator>
-            </NavigationContainer>
-           
-   
+    <RootStack />
   );
 }
 

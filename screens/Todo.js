@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginTop: 738
   },
   list: {
-    fontFamily: "roboto-re",
+
     color: "#121212",
     fontSize: 28
   },

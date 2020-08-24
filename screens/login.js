@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default class login extends React.Component {
+  
   state={
     email:"",
     password:""
@@ -34,7 +35,7 @@ export default class login extends React.Component {
         <TouchableOpacity style={styles.loginBtn}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => NavigationPreloadManager.navigate('SignUp')}>
           <Text style={styles.Text}>Signup</Text>
         </TouchableOpacity>
 
