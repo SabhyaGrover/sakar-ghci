@@ -67,6 +67,30 @@ function SignUp(props) {
                     style={styles.emailInput}
                   ></TextInput>
                 </View>
+                <View style={styles.age}>
+                  <EvilIconsIcon
+                    name="archive"
+                    style={styles.icon8}
+                  ></EvilIconsIcon>
+                  <TextInput
+                    placeholder="Age"
+                    placeholderTextColor="white"
+                    secureTextEntry={false}
+                    style={styles.ageInput}
+                  ></TextInput>
+                </View>
+                <View style={styles.region}>
+                  <EvilIconsIcon
+                    name="location"
+                    style={styles.icon9}
+                  ></EvilIconsIcon>
+                  <TextInput
+                    placeholder="Region"
+                    placeholderTextColor="white"
+                    secureTextEntry={false}
+                    style={styles.regionInput}
+                  ></TextInput>
+                </View>
               </View>
               <View style={styles.nameColumnFiller}></View>
               <View style={styles.password}>
@@ -209,6 +233,56 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   emailInput: {
+    height: 30,
+    color: "white",
+    flex: 1,
+    marginRight: 17,
+    marginLeft: 13,
+    marginTop: 14
+  },
+  nameColumn: {},
+  nameColumnFiller: {
+    flex: 1
+  },
+  age: {
+    height: 59,
+    backgroundColor: "#e1bee7",
+    borderRadius: 5,
+    flexDirection: "row",
+    marginTop: 27
+  },
+  icon8: {
+    color: "white",
+    fontSize: 33,
+    marginLeft: 15,
+    alignSelf: "center"
+  },
+  ageInput: {
+    height: 30,
+    color: "white",
+    flex: 1,
+    marginRight: 17,
+    marginLeft: 13,
+    marginTop: 14
+  },
+  nameColumn: {},
+  nameColumnFiller: {
+    flex: 1
+  },
+  region: {
+    height: 59,
+    backgroundColor: "#e1bee7",
+    borderRadius: 5,
+    flexDirection: "row",
+    marginTop: 27
+  },
+  icon9: {
+    color: "white",
+    fontSize: 33,
+    marginLeft: 15,
+    alignSelf: "center"
+  },
+  regionInput: {
     height: 30,
     color: "white",
     flex: 1,
