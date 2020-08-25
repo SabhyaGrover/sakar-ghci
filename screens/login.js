@@ -3,7 +3,6 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default class login extends React.Component {
-  
   state={
     email:"",
     password:""
@@ -32,14 +31,14 @@ export default class login extends React.Component {
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
+        <TouchableOpacity style={styles.loginBtn} onPress={() => this.props.navigation.navigate('Todo')}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => NavigationPreloadManager.navigate('SignUp')}>
-          <Text style={styles.Text}>Signup</Text>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
+          <Text style={styles.Text}>Sign Up</Text>
         </TouchableOpacity>
 
-  
+
       </View>
     );
   }

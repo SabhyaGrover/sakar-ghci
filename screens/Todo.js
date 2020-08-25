@@ -4,7 +4,7 @@ import MaterialIconButtonsFooter from "../components/MaterialIconButtonsFooter";
 import MaterialButtonWithShadow from "../components/MaterialButtonWithShadow";
 import MaterialButtonPink from "../components/MaterialButtonPink";
 
-function Untitled1(props) {
+export default function Todo(props) {
   return (
     <View style={styles.container}>
       <MaterialIconButtonsFooter
@@ -56,5 +56,3 @@ const styles = StyleSheet.create({
     marginLeft: 41
   }
 });
-
-export default Untitled1;
