@@ -8,10 +8,6 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-
-import IoniconsIcon from "react-native-vector-icons/Ionicons";
-import EntypoIcon from "react-native-vector-icons/Entypo";
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 
 function SignUp(props) {
@@ -22,24 +18,7 @@ function SignUp(props) {
         <ImageBackground
           style={styles.rect2}
         >
-          <View style={styles.progressBarColumn}>
-            <View style={styles.progressBar}>
-              <View style={styles.icon2Row}>
-                <IoniconsIcon
-                  name="md-checkmark-circle"
-                  style={styles.icon2}
-                ></IoniconsIcon>
-                <View style={styles.rect4}></View>
-                <EntypoIcon name="time-slot" style={styles.icon3}></EntypoIcon>
-                <View style={styles.rect5}></View>
-              </View>
-              <View style={styles.icon2RowFiller}></View>
-              <FontAwesomeIcon
-                name="circle"
-                style={styles.icon4}
-              ></FontAwesomeIcon>
-            </View>
-               
+          <View style={styles.text3Column}>
             <Text style={styles.text3}>CREATE ACCOUNT</Text>
             <View style={styles.form}>
               <View style={styles.nameColumn}>
@@ -62,9 +41,21 @@ function SignUp(props) {
                   ></EvilIconsIcon>
                   <TextInput
                     placeholder="Email"
-                    placeholderTextColor="white"
+                    placeholderTextColor="rgba(255,255,255,1)"
                     secureTextEntry={false}
                     style={styles.emailInput}
+                  ></TextInput>
+                </View>
+                <View style={styles.age}>
+                  <EvilIconsIcon
+                    name="archive"
+                    style={styles.icon9}
+                  ></EvilIconsIcon>
+                  <TextInput
+                    placeholder="Age"
+                    placeholderTextColor="rgba(255,255,255,1)"
+                    secureTextEntry={false}
+                    style={styles.ageInput}
                   ></TextInput>
                 </View>
               </View>
@@ -73,14 +64,26 @@ function SignUp(props) {
                 <EvilIconsIcon name="lock" style={styles.icon7}></EvilIconsIcon>
                 <TextInput
                   placeholder="Password"
-                  placeholderTextColor="white"
+                  placeholderTextColor="rgba(255,255,255,1)"
                   secureTextEntry={true}
                   style={styles.passwordInput}
                 ></TextInput>
               </View>
             </View>
+            <View style={styles.region}>
+              <EvilIconsIcon
+                name="location"
+                style={styles.icon8}
+              ></EvilIconsIcon>
+              <TextInput
+                placeholder="Region"
+                placeholderTextColor="rgba(255,255,255,1)"
+                secureTextEntry={false}
+                style={styles.regionInput}
+              ></TextInput>
+            </View>
           </View>
-          <View style={styles.progressBarColumnFiller}></View>
+          <View style={styles.text3ColumnFiller}></View>
           <View style={styles.buttonColumn}>
             <TouchableOpacity
               onPress={() => props.navigation.navigate("Timeline")}
@@ -97,7 +100,6 @@ function SignUp(props) {
 }
 
 const styles = StyleSheet.create({
-
   root: {
     flex: 1,
     backgroundColor: "rgb(255,255,255)"
@@ -107,70 +109,17 @@ const styles = StyleSheet.create({
   },
   rect2: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor:"white"
   },
   rect2_imageStyle: {},
-  progressBar: {
-    height: 40,
-    flexDirection: "row",
-    marginLeft: 28,
-    marginRight: 28
-  },
-  icon2: {
-    color: "#e1bee7",
-    fontSize: 40,
-    width: 33,
-    height: 40
-  },
-  rect4: {
-    width: 50,
-    height: 7,
-    backgroundColor: "#3f51b5",
-    borderRadius: 40,
-    marginLeft: 6,
-    marginTop: 16
-  },
-  
-  icon3: {
-    color: "#e1bee7",
-    fontSize: 35,
-    width: 40,
-    height: 36,
-    marginLeft: 4,
-    marginTop: 4
-  },
-  rect5: {
-    width: 50,
-    height: 7,
-    backgroundColor: "#3f51b5",
-    opacity: 0.75,
-    borderRadius: 40,
-    marginTop: 16
-  },
-  icon2Row: {
-    height: 40,
-    flexDirection: "row"
-  },
-  icon2RowFiller: {
-    flex: 1,
-    flexDirection: "row"
-  },
-  icon4: {
-    color: "#e1bee7",
-    fontSize: 40,
-    width: 34,
-    height: 40,
-    opacity: 0.75
-  },
   text3: {
     color: "purple",
     fontSize: 24,
-    marginTop: 67,
     alignSelf: "center"
   },
   form: {
     height: 230,
-    marginTop: 108
+    marginTop: 52
   },
   name: {
     height: 59,
@@ -200,7 +149,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#e1bee7",
     borderRadius: 5,
     flexDirection: "row",
-    marginTop: 27
+    marginTop: 20
   },
   icon6: {
     color: "white",
@@ -216,6 +165,27 @@ const styles = StyleSheet.create({
     marginLeft: 13,
     marginTop: 14
   },
+  age: {
+    height: 59,
+    backgroundColor: "#e1bee7",
+    borderRadius: 5,
+    flexDirection: "row",
+    marginTop: 25
+  },
+  icon9: {
+    color: "white",
+    fontSize: 33,
+    marginLeft: 15,
+    alignSelf: "center"
+  },
+  ageInput: {
+    height: 30,
+    color: "white",
+    flex: 1,
+    marginRight: 17,
+    marginLeft: 13,
+    marginTop: 14
+  },
   nameColumn: {},
   nameColumnFiller: {
     flex: 1
@@ -224,7 +194,8 @@ const styles = StyleSheet.create({
     height: 59,
     backgroundColor: "#e1bee7",
     borderRadius: 5,
-    flexDirection: "row"
+    flexDirection: "row",
+    marginBottom: -150
   },
   icon7: {
     color: "white",
@@ -240,12 +211,33 @@ const styles = StyleSheet.create({
     marginLeft: 13,
     marginTop: 14
   },
-  progressBarColumn: {
-    marginTop: 53,
+  region: {
+    height: 59,
+    backgroundColor: "#e1bee7",
+    borderRadius: 5,
+    flexDirection: "row",
+    marginTop: 12
+  },
+  icon8: {
+    color: "white",
+    fontSize: 33,
+    marginLeft: 15,
+    alignSelf: "center"
+  },
+  regionInput: {
+    height: 30,
+    color: "white",
+    flex: 1,
+    marginRight: 17,
+    marginLeft: 13,
+    marginTop: 14
+  },
+  text3Column: {
+    marginTop: 56,
     marginLeft: 41,
     marginRight: 41
   },
-  progressBarColumnFiller: {
+  text3ColumnFiller: {
     flex: 1
   },
   button: {
@@ -259,7 +251,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     width: 66,
-    color: "#403B34",
+    color: "white",
     alignSelf: "center"
   },
   text4: {
