@@ -6,19 +6,21 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
-  Text
+  Text,
 } from "react-native";
+import {ScrollView} from 'react-native-gesture-handler';
 
 function Interests(props) {
   return (
     <View style={styles.root}>
       <StatusBar barStyle="light-content" backgroundColor="rgba(0,0,0,0)" />
-      <View style={styles.bodyStack}>
-        <View style={styles.body}>
+      <ScrollView
+        style={{ flex: 1}}
+        scrollEnabled
+        contentContainerStyle={styles.buttonRow}
+        >
           <View style={styles.categories}>
-            <View style={styles.button2RowColumn}>
-              <View style={styles.button2Row}>
-                <TouchableOpacity style={styles.button2}>
+                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/astronaut-astronomy-cosmos-2156.jpg")}
                     resizeMode="cover"
@@ -31,8 +33,8 @@ function Interests(props) {
                     </View>
                   </ImageBackground>
                 </TouchableOpacity>
-                <View style={styles.button2Filler}></View>
-                <TouchableOpacity style={styles.button3}>
+               
+                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/chips-circuit-circuit-board-343457.jpg")}
                     resizeMode="cover"
@@ -45,9 +47,7 @@ function Interests(props) {
                     </View>
                   </ImageBackground>
                 </TouchableOpacity>
-              </View>
-              <View style={styles.button4Row}>
-                <TouchableOpacity style={styles.button4}>
+                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/accessories-accessory-boots-322207.jpg")}
                     resizeMode="cover"
@@ -60,8 +60,7 @@ function Interests(props) {
                     </View>
                   </ImageBackground>
                 </TouchableOpacity>
-                <View style={styles.button4Filler}></View>
-                <TouchableOpacity style={styles.button5}>
+                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/cash-cent-child-1246954.jpg")}
                     resizeMode="cover"
@@ -74,11 +73,7 @@ function Interests(props) {
                     </View>
                   </ImageBackground>
                 </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.button2RowColumnFiller}></View>
-            <View style={styles.button7Row}>
-              <TouchableOpacity style={styles.button7}>
+              <TouchableOpacity style={styles.button}>
                 <ImageBackground
                   source={require("../assets/images/conifers-daylight-environment-1666021.jpg")}
                   resizeMode="cover"
@@ -91,8 +86,7 @@ function Interests(props) {
                   </View>
                 </ImageBackground>
               </TouchableOpacity>
-              <View style={styles.button7Filler}></View>
-              <TouchableOpacity style={styles.button6}>
+              <TouchableOpacity style={styles.button}>
                 <ImageBackground
                   source={require("../assets/images/architecture-audi-automotive-1545743.jpg")}
                   resizeMode="cover"
@@ -105,11 +99,8 @@ function Interests(props) {
                   </View>
                 </ImageBackground>
               </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-        
-      </View>
+              </View>
+              </ScrollView>
     </View>
   );
 }
@@ -120,22 +111,18 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(255,255,255)"
   },
   body: {
-    top: 63,
-    left: 0,
+    flex:1,
     position: "absolute",
-    right: 0,
-    bottom: 0
+
   },
   categories: {
     backgroundColor: "rgba(255,255,255,1)",
-    flex: 1,
-    marginTop: 80
+    flex: 1
   },
-  button2: {
-    width: 150,
-    height: 150,
+  button: {
+    width: '100%',
+    height: '100%',
     backgroundColor: "rgba(230, 230, 230,1)",
-    elevation: 18,
     borderRadius: 5,
     overflow: "hidden"
   },
@@ -150,7 +137,7 @@ const styles = StyleSheet.create({
     height: 27,
     backgroundColor: "rgba(21,19,19,0.5)",
     justifyContent: "center",
-    marginBottom: 1
+
   },
   text22: {
     color: "rgba(247,252,253,1)",
@@ -186,9 +173,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: "center"
   },
-  button2Row: {
-    height: 150,
-    flexDirection: "row"
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent:'space-around',
+    alignContent:'center',
+    flexWrap:'wrap'
   },
   button4: {
     width: 150,
@@ -209,7 +198,7 @@ const styles = StyleSheet.create({
     height: 27,
     backgroundColor: "rgba(21,19,19,0.5)",
     justifyContent: "center",
-    marginBottom: 1
+
   },
   text24: {
     color: "rgba(247,252,253,1)",
@@ -238,7 +227,6 @@ const styles = StyleSheet.create({
   rect84: {
     height: 27,
     backgroundColor: "rgba(21,19,19,0.5)",
-    marginBottom: 1
   },
   text25: {
     color: "rgba(247,252,253,1)",
@@ -249,10 +237,9 @@ const styles = StyleSheet.create({
   button4Row: {
     height: 150,
     flexDirection: "row",
-    marginTop: 39
+
   },
   button2RowColumn: {
-    marginTop: 20,
     marginLeft: 15,
     marginRight: 15
   },
@@ -280,7 +267,7 @@ const styles = StyleSheet.create({
   rect85: {
     height: 27,
     backgroundColor: "rgba(21,19,19,0.5)",
-    marginBottom: 2
+
   },
   text26: {
     color: "rgba(247,252,253,1)",
@@ -313,7 +300,6 @@ const styles = StyleSheet.create({
   rect86: {
     height: 27,
     backgroundColor: "rgba(21,19,19,0.5)",
-    marginBottom: 1
   },
   text27: {
     color: "rgba(247,252,253,1)",
@@ -324,7 +310,6 @@ const styles = StyleSheet.create({
   button7Row: {
     height: 150,
     flexDirection: "row",
-    marginBottom: 30,
     marginLeft: 15,
     marginRight: 15
   },
@@ -386,7 +371,6 @@ const styles = StyleSheet.create({
   },
   bodyStack: {
     flex: 1,
-    marginTop: 20
   }
 });
 
