@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
-import EntypoIcon from "react-native-vector-icons/Entypo";
-import BookmarksIcon from '@material-ui/icons/Bookmarks';
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 function MaterialIconButtonsFooter(props) {
   return (
@@ -16,38 +13,37 @@ function MaterialIconButtonsFooter(props) {
       </TouchableOpacity>
       <TouchableOpacity style={styles.buttonWrapper2}>
         <MaterialCommunityIconsIcon
-          name="AssignmentTurnedIn"
+          name="trophy-award"
+          style={styles.activeIcon}
+        ></MaterialCommunityIconsIcon>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonWrapper3}>
+        <MaterialCommunityIconsIcon
+          name="checkbox-marked-circle-outline"
           style={styles.icon3}
         ></MaterialCommunityIconsIcon>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonWrapper3}>
+      
+      <TouchableOpacity style={styles.buttonWrapper5}>
         <MaterialCommunityIconsIcon
-          name="trophy"
-          style={styles.icon4}
-        ></MaterialCommunityIconsIcon>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonWrapper3}>
-        <MaterialCommunityIconsIcon
-          name="save"
-          style={styles.icon2}
-        ></MaterialCommunityIconsIcon>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonWrapper3}>
-        <MaterialCommunityIconsIcon
-          name="Profile"
+          name="account-box-outline"
           style={styles.icon5}
         ></MaterialCommunityIconsIcon>
       </TouchableOpacity>
       
-      
-     
+      <TouchableOpacity style={styles.buttonWrapper4}>
+        <MaterialCommunityIconsIcon
+          name="book-variant"
+          style={styles.icon4}
+        ></MaterialCommunityIconsIcon>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(156,53,178,1)",
+    backgroundColor: "#3f51b5",
     flexDirection: "row",
     alignItems: "center",
     shadowColor: "#111",
@@ -55,12 +51,12 @@ const styles = StyleSheet.create({
       width: 0,
       height: -2
     },
-    shadowOpacity: 1,
+    shadowOpacity: 0.2,
     shadowRadius: 1.2,
     elevation: 3
   },
   buttonWrapper1: {
-    flex: 0.29,
+    flex: 1,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -71,8 +67,31 @@ const styles = StyleSheet.create({
     fontSize: 24,
     opacity: 0.8
   },
+  buttonWrapper5: {
+    flex: 1,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center"
+  },
+  icon5: {
+    backgroundColor: "transparent",
+    color: "#FFFFFF",
+    fontSize: 24,
+    opacity: 0.8
+  },
+  buttonWrapper2: {
+    flex: 1,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center"
+  },
+  activeIcon: {
+    backgroundColor: "transparent",
+    color: "#FFFFFF",
+    fontSize: 24
+  },
   buttonWrapper3: {
-    flex: 0.34,
+    flex: 1,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -84,7 +103,7 @@ const styles = StyleSheet.create({
     opacity: 0.8
   },
   buttonWrapper4: {
-    flex: 0.34,
+    flex: 1,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -94,31 +113,6 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 24,
     opacity: 0.8
-  },
-  icon5: {
-    backgroundColor: "transparent",
-    color: "#FFFFFF",
-    fontSize: 24,
-    opacity: 0.8
-    
-  },
-  icon6: {
-    top: 7,
-    left: 230,
-    position: "absolute",
-    color: "rgba(255,255,255,1)",
-    fontSize: 32,
-    flex: 0.01
-  },
-  icon7: {
-    top: 9,
-    left: 329,
-    position: "absolute",
-    color: "rgba(255,255,255,1)",
-    fontSize: 40,
-    flex: 0.01,
-    width: 37,
-    height: 40
   }
 });
 
