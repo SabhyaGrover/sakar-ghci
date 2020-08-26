@@ -17,10 +17,10 @@ export default function App() {
   return (       
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name = 'interest' component = { Interests } />
         <Stack.Screen name = 'login' component = { login } />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Todo' component ={ Todo } />
+        <Stack.Screen name = 'Interest' component = { Interests } />
       </Stack.Navigator>
     </NavigationContainer>
   );

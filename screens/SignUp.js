@@ -86,7 +86,7 @@ function SignUp(props) {
           <View style={styles.text3ColumnFiller}></View>
           <View style={styles.buttonColumn}>
             <TouchableOpacity
-              onPress={() => props.navigation.navigate("Timeline")}
+              onPress={() => props.navigation.navigate("Interest")}
               style={styles.button}
             >
               <Text style={styles.text2}>Continue</Text>
