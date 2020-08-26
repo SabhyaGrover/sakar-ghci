@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 import Welcome from './screens/Welcome';
 import login from './screens/login';
-import Todo from './screens/Todo';
+import footer from './screens/footer';
 import SignUp from './screens/SignUp';
 import Index from './screens/index';
 import Interests from './screens/Interests';
@@ -17,11 +17,11 @@ export default function App() {
   return (       
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name = 'interest' component = { Interests } />
-        <Stack.Screen name = 'index' component = { Index } />
         <Stack.Screen name = 'login' component = { login } />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Todo' component ={ Todo } />
+        <Stack.Screen name = 'Interest' component = { Interests } />
+        <Stack.Screen name = 'footer' component ={ footer} />
       </Stack.Navigator>
     </NavigationContainer>
   );
