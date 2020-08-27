@@ -43,7 +43,7 @@ function MaterialIconButtonsFooter(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#3f51b5",
+    backgroundColor: "#A22FB7",
     flexDirection: "row",
     alignItems: "center",
     shadowColor: "#111",
