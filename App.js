@@ -21,13 +21,8 @@ export default function App() {
       <Stack.Screen name = 'channels1' component = { Channels1 } />
         <Stack.Screen name = 'login' component = { login } />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
-<<<<<<< HEAD
-        
-        <Stack.Screen name = 'interest' component = { Interests } />
-=======
         <Stack.Screen name = 'Todo' component ={ Todo } />
         <Stack.Screen name = 'Interest' component = { Interests } />
->>>>>>> 80180c5152a4a02f3a9968b49ca6b74072fb4b5d
         <Stack.Screen name = 'footer' component ={ footer} />
       </Stack.Navigator>
     </NavigationContainer>
