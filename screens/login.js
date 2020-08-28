@@ -11,7 +11,7 @@ export default class login extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
-     <Image source={require("../assets/images/sakar_logo.png")} resizeMode='cover' />
+     <Image source={require("../assets/images/sakar_logo.png")} resizeMode='cover'/>
      </View>
         <View style={styles.inputView} >
           <TextInput  
@@ -50,8 +50,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+
   },
-  
+  logo:{
+    flexBasis:'50%',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+  },
   inputView:{
     width:"80%",
     backgroundColor:"#e1bee7",

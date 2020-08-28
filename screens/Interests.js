@@ -3,42 +3,36 @@ import {
   StyleSheet,
   View,
   StatusBar,
-  TouchableOpacity,
-  Image,
   ImageBackground,
   Text,
 } from "react-native";
-import {ScrollView} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 
 function Interests(props) {
   return (
     <View style={styles.root}>
       <StatusBar barStyle="light-content" backgroundColor="rgba(0,0,0,0)" />
       <ScrollView
-        style={{ flex: 1}}
-        scrollEnabled
-        contentContainerStyle={styles.buttonRow}
-        >
-          <View style={styles.categories}>
-                <TouchableOpacity style={styles.button}>
+        style= {styles.container}
+        contentContainerStyle={{
+          flexGrow:1,
+            }}
+          >
+            <TouchableOpacity style={{flexGrow:1,alignSelf:'stretch'}}>
+             
                   <ImageBackground
                     source={require("../assets/images/astronaut-astronomy-cosmos-2156.jpg")}
                     resizeMode="cover"
-                    style={styles.image}
-                    imageStyle={styles.image_imageStyle}
                   >
-                    <View style={styles.rect8Filler}></View>
                     <View style={styles.rect8}>
                       <Text style={styles.text22}>SCIENCE</Text>
                     </View>
                   </ImageBackground>
-                </TouchableOpacity>
-               
-                <TouchableOpacity style={styles.button}>
+                  </TouchableOpacity>
                   <ImageBackground
                     source={require("../assets/images/chips-circuit-circuit-board-343457.jpg")}
                     resizeMode="cover"
-                    style={styles.image2}
+                    style={styles.image}
                     imageStyle={styles.image2_imageStyle}
                   >
                     <View style={styles.rect82Filler}></View>
@@ -46,12 +40,10 @@ function Interests(props) {
                       <Text style={styles.text23}>TECHNOLOGY</Text>
                     </View>
                   </ImageBackground>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/accessories-accessory-boots-322207.jpg")}
                     resizeMode="cover"
-                    style={styles.image3}
+                    style={styles.image}
                     imageStyle={styles.image3_imageStyle}
                   >
                     <View style={styles.rect83Filler}></View>
@@ -59,12 +51,10 @@ function Interests(props) {
                       <Text style={styles.text24}>FASHION</Text>
                     </View>
                   </ImageBackground>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
                   <ImageBackground
                     source={require("../assets/images/cash-cent-child-1246954.jpg")}
                     resizeMode="cover"
-                    style={styles.image4}
+                    style={styles.image}
                     imageStyle={styles.image4_imageStyle}
                   >
                     <View style={styles.rect84Filler}></View>
@@ -72,12 +62,10 @@ function Interests(props) {
                       <Text style={styles.text25}>FINANCE</Text>
                     </View>
                   </ImageBackground>
-                </TouchableOpacity>
-              <TouchableOpacity style={styles.button}>
-                <ImageBackground
+                  <ImageBackground
                   source={require("../assets/images/conifers-daylight-environment-1666021.jpg")}
                   resizeMode="cover"
-                  style={styles.image22}
+                  style={styles.image}
                   imageStyle={styles.image22_imageStyle}
                 >
                   <View style={styles.rect85Filler}></View>
@@ -85,12 +73,10 @@ function Interests(props) {
                     <Text style={styles.text26}>ENVIRONMENT</Text>
                   </View>
                 </ImageBackground>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.button}>
                 <ImageBackground
                   source={require("../assets/images/architecture-audi-automotive-1545743.jpg")}
                   resizeMode="cover"
-                  style={styles.image32}
+                  style={styles.image}
                   imageStyle={styles.image32_imageStyle}
                 >
                   <View style={styles.rect86Filler}></View>
@@ -98,8 +84,8 @@ function Interests(props) {
                     <Text style={styles.text27}>AUTO</Text>
                   </View>
                 </ImageBackground>
-              </TouchableOpacity>
-              </View>
+
+
               </ScrollView>
     </View>
   );
@@ -110,9 +96,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgb(255,255,255)"
   },
-  body: {
+  container: {
     flex:1,
-    position: "absolute",
+    alignSelf:'stretch',
 
   },
   categories: {
@@ -124,10 +110,10 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: "rgba(230, 230, 230,1)",
     borderRadius: 5,
-    overflow: "hidden"
   },
   image: {
-    flex: 1
+    flexGrow: 1,
+    alignContent:'center',
   },
   image_imageStyle: {},
   rect8Filler: {
