@@ -23,6 +23,7 @@ function HomeScreen(){
   );
 }
 
+
 export default function App() {
   return (
     <NavigationContainer>
@@ -30,19 +31,12 @@ export default function App() {
       
       <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'login' component = { login } />
-<<<<<<< HEAD
-        <Stack.Screen name = 'SignUp' component = { SignUp } />       
-        <Stack.Screen name = 'footer' component ={ footer} />
-      </Stack.Navigator>
-    </NavigationContainer>
-=======
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>
 
->>>>>>> 5c5772e745eab8af359973a5b2ca333b3d3e0721
   );
 }
 
