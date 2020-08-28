@@ -1,41 +1,37 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-function MaterialIconButtonsFooter(props) {
+function MaterialBasicFooter(props) {
   return (
     <View style={[styles.container, props.style]}>
-      <TouchableOpacity style={styles.buttonWrapper1}>
+      <TouchableOpacity style={styles.btnWrapper1}>
         <MaterialCommunityIconsIcon
-          name="home"
+          name="television"
           style={styles.icon1}
         ></MaterialCommunityIconsIcon>
+        <Text style={styles.btn1Text}>Movies</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonWrapper2}>
+      <TouchableOpacity style={styles.activebtnWrapper}>
         <MaterialCommunityIconsIcon
-          name="trophy-award"
+          name="music-note"
           style={styles.activeIcon}
         ></MaterialCommunityIconsIcon>
+        <Text style={styles.activeText}>Music</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonWrapper3}>
+      <TouchableOpacity style={styles.btnWrapper2}>
         <MaterialCommunityIconsIcon
-          name="checkbox-marked-circle-outline"
+          name="book"
+          style={styles.icon2}
+        ></MaterialCommunityIconsIcon>
+        <Text style={styles.btn2Text}>Books</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnWrapper3}>
+        <MaterialCommunityIconsIcon
+          name="calendar-text"
           style={styles.icon3}
         ></MaterialCommunityIconsIcon>
-      </TouchableOpacity>
-      
-      <TouchableOpacity style={styles.buttonWrapper5}>
-        <MaterialCommunityIconsIcon
-          name="account-box-outline"
-          style={styles.icon5}
-        ></MaterialCommunityIconsIcon>
-      </TouchableOpacity>
-      
-      <TouchableOpacity style={styles.buttonWrapper4}>
-        <MaterialCommunityIconsIcon
-          name="book-variant"
-          style={styles.icon4}
-        ></MaterialCommunityIconsIcon>
+        <Text style={styles.btn3Text}>Calendar</Text>
       </TouchableOpacity>
     </View>
   );
@@ -43,7 +39,7 @@ function MaterialIconButtonsFooter(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#A22FB7",
+    backgroundColor: "#3f51b5",
     flexDirection: "row",
     alignItems: "center",
     shadowColor: "#111",
@@ -55,8 +51,11 @@ const styles = StyleSheet.create({
     shadowRadius: 1.2,
     elevation: 3
   },
-  buttonWrapper1: {
+  btnWrapper1: {
     flex: 1,
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -67,20 +66,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     opacity: 0.8
   },
-  buttonWrapper5: {
-    flex: 1,
-    minWidth: 80,
-    maxWidth: 168,
-    alignItems: "center"
-  },
-  icon5: {
-    backgroundColor: "transparent",
+  btn1Text: {
     color: "#FFFFFF",
-    fontSize: 24,
     opacity: 0.8
   },
-  buttonWrapper2: {
+  activebtnWrapper: {
     flex: 1,
+    paddingTop: 6,
+    paddingBottom: 10,
+    paddingHorizontal: 12,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -90,8 +84,35 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 24
   },
-  buttonWrapper3: {
+  activeText: {
+    color: "#FFFFFF",
+    fontSize: 14,
+    paddingTop: 4
+  },
+  btnWrapper2: {
     flex: 1,
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center"
+  },
+  icon2: {
+    backgroundColor: "transparent",
+    color: "#FFFFFF",
+    fontSize: 24,
+    opacity: 0.8
+  },
+  btn2Text: {
+    color: "#FFFFFF",
+    opacity: 0.8
+  },
+  btnWrapper3: {
+    flex: 1,
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
     minWidth: 80,
     maxWidth: 168,
     alignItems: "center"
@@ -102,18 +123,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
     opacity: 0.8
   },
-  buttonWrapper4: {
-    flex: 1,
-    minWidth: 80,
-    maxWidth: 168,
-    alignItems: "center"
-  },
-  icon4: {
-    backgroundColor: "transparent",
+  btn3Text: {
     color: "#FFFFFF",
-    fontSize: 24,
     opacity: 0.8
   }
 });
 
-export default MaterialIconButtonsFooter;
+export default MaterialBasicFooter;
