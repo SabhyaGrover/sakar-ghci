@@ -11,7 +11,7 @@ import {
 import MaterialSearchBar1 from "../components/MaterialSearchBar1";
 
 
-function Channels1(props) {
+function Home(props) {
   return (
     <View style={styles.root}>
       <StatusBar barStyle="light-content" backgroundColor="rgba(0,0,0,0)" />
@@ -265,4 +265,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Channels1;
+export default Home;

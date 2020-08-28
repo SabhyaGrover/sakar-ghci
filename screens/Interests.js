@@ -19,7 +19,7 @@ function Interests(props) {
             }}
           >
             <TouchableOpacity style={{flexGrow:1,alignSelf:'stretch'}}>
-             
+
                   <ImageBackground
                     source={require("../assets/images/astronaut-astronomy-cosmos-2156.jpg")}
                     resizeMode="cover"
