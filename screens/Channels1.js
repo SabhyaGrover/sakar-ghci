@@ -9,7 +9,7 @@ import {
   ImageBackground
 } from "react-native";
 import MaterialSearchBar1 from "../components/MaterialSearchBar1";
-import MaterialBasicFooter from "../components/MaterialBasicFooter";
+
 
 function Channels1(props) {
   return (
@@ -85,9 +85,6 @@ function Channels1(props) {
           </View>
         </View>
       </View>
-      <MaterialBasicFooter
-        style={styles.materialBasicFooter}
-      ></MaterialBasicFooter>
     </View>
   );
 }
