@@ -85,6 +85,7 @@ function Channels1(props) {
           </View>
         </View>
       </View>
+      
     </View>
   );
 }
@@ -261,12 +262,6 @@ const styles = StyleSheet.create({
     marginBottom: 111,
     marginLeft: 15,
     marginRight: 15
-  },
-  materialBasicFooter: {
-    height: 56,
-    width: 375,
-    marginTop: -1145,
-    marginLeft: -599
   }
 });
 
