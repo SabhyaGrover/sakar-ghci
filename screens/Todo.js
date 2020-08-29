@@ -7,52 +7,74 @@ import MaterialButtonPink from "../components/MaterialButtonPink";
 export default function Todo(props) {
   return (
     <View style={styles.container}>
-      <MaterialIconButtonsFooter
-        style={styles.materialIconButtonsFooter}
-      ></MaterialIconButtonsFooter>
-      <View style={styles.listRow}>
-        <Text style={styles.list}>List</Text>
-        <MaterialButtonWithShadow
+       <Text style={styles.list}>List</Text>
+       <View style={styles.entry} >
+       <View style={styles.listRow}>
+       <MaterialButtonWithShadow
           style={styles.materialButtonWithShadow}
         ></MaterialButtonWithShadow>
-      </View>
       <MaterialButtonPink
         style={styles.materialButtonPink}
       ></MaterialButtonPink>
+      </View>
+    <View style={styles.listRow}>
+       <MaterialButtonWithShadow
+          style={styles.materialButtonWithShadow}
+        ></MaterialButtonWithShadow>
+      <MaterialButtonPink
+        style={styles.materialButtonPink}
+      ></MaterialButtonPink>
+      </View>
+ <View style={styles.listRow}>
+       <MaterialButtonWithShadow
+          style={styles.materialButtonWithShadow}
+        ></MaterialButtonWithShadow>
+      <MaterialButtonPink
+        style={styles.materialButtonPink}
+      ></MaterialButtonPink>
+      </View>
+ <View style={styles.listRow}>
+       <MaterialButtonWithShadow
+          style={styles.materialButtonWithShadow}
+        ></MaterialButtonWithShadow>
+      <MaterialButtonPink
+        style={styles.materialButtonPink}
+      ></MaterialButtonPink>
+
+      </View>
+
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'flex-start',
+
   },
-  materialIconButtonsFooter: {
-    height: 56,
-    width: 375,
-    marginTop: 738
+  entry:
+  {
+    marginTop:100,
   },
   list: {
-
+    marginTop:100,
+    justifyContent:'center',
     color: "#121212",
     fontSize: 28
   },
   materialButtonWithShadow: {
-    height: 36,
-    width: 85,
-    marginLeft: 57
   },
   listRow: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: -704,
-    marginLeft: 165,
-    marginRight: 23
+    alignSelf:'center',
+    marginTop:10,
+    flexDirection:'row'
   },
   materialButtonPink: {
-    height: 46,
-    width: 311,
-    marginTop: 53,
-    marginLeft: 41
+    alignContent:'center',
+    width:'70%'
   }
 });
