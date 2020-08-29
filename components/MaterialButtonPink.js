@@ -11,7 +11,7 @@ function MaterialButtonPink(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(163,34,189,1)",
+    backgroundColor: "#b39ddb",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     paddingRight: 16
   },
   addNewTodoList: {
-    color: "#fff",
+    color: "black",
     fontSize: 14
   }
 });
