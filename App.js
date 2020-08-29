@@ -29,7 +29,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       
-      <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'login' component = { login } />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
