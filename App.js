@@ -16,8 +16,8 @@ const Tab = createMaterialBottomTabNavigator()
 
 function HomeScreen(){
   return(
-    <Tab.Navigator>
-        <Tab.Screen name = 'Home' component = {Home}/>
+    <Tab.Navigator barStyle={{backgroundColor:'purple'}}>
+        <Tab.Screen name = 'Home' component = {Home} />
         <Tab.Screen name='ToDo' component={Todo}/>
     </Tab.Navigator>
   );
@@ -29,7 +29,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       
-        <Stack.Screen name = 'login' component = { login } />
+        <Stack.Screen name = 'login' component = { login } nq />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
