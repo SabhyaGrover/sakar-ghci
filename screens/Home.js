@@ -53,13 +53,18 @@ state={
                             elevation: 1,
                             marginTop: Platform.OS == 'android' ? 30 : null
                         }}>
-                            <Icon name="ios-search" size={20} style={{ marginRight: 10 }} />
                             <TextInput
                                 underlineColorAndroid="transparent"
-                                placeholder="Try New Delhi"
+                                placeholder="Search"
                                 placeholderTextColor="grey"
                                 style={{ flex: 1, fontWeight: '700', backgroundColor: 'white' }}
                             />
+                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain"
+          style={styles.image1}
+        ></Image>
+          
+          
+              
                         </View>
                     </View>
 
@@ -78,6 +83,13 @@ state={
 export default Explore;
 
 const styles = StyleSheet.create({
+    image1: {
+        top: 0,
+        left: 270,
+        width: 60,
+        height: 54,
+        position: "absolute"
+      },
     container: {
         flex: 1,
         alignItems: 'center',
