@@ -21,14 +21,18 @@ function HomeScreen(){
   return(
 
     <Tab.Navigator barStyle = {{ backgroundColor : '#481480' }}>
-            <Tab.Screen 
+            <Tab.Screen
          name = 'Home' component = {Home} options={{
           tabBarLabel: 'Home',
-          tabIcon: ({  tintColor }) => (
-                <EvilIconsIcon name="user" style={style.icon1} color={tintColor} size={25} />
+          tabBarIcon: ({  tintColor }) => (
+                <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
           )}} />
-        
-        <Tab.Screen name='ToDo' component={Todo}/>
+
+        <Tab.Screen name='ToDo' component={Todo} options={{
+          tabBarLabel: 'ToDo',
+          tabBarIcon: ({  tintColor }) => (
+                <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
+          )}}/>
     </Tab.Navigator>
     
   );
@@ -50,12 +54,9 @@ export default function App() {
   );
 }
 const styles = StyleSheet.create({
-  icon1: {
+  icon: {
     color: "white",
-    fontSize: 33,
-    width: 33,
-    height: 33,
-    marginLeft: 15,
+    justifyContent:'center',
     alignSelf: "center"
   },
 });

@@ -18,22 +18,20 @@ import { FlatList } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get('window')
 const axios = require('axios')
-const api_key = 
+
 class Explore extends Component {
 state={
     vid : '',
 };
 
    async componentDidMount(){
-       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=${api_key}')
+       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ')
         .then(response => {
             //console.log(response);
          response.data.items
             this.setState({
                 vid : response.data.items,
             });
-
-            console.log(vid);
         })
         .catch(function(error){
             console.log(error)
@@ -42,8 +40,9 @@ state={
     render() {
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 }}>
+                <View style={{ flex: 1}}>
                     <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
+
                         <View style={{
                             flexDirection: 'row', padding: 10,
                             backgroundColor: 'white', marginHorizontal: 20,
@@ -51,18 +50,18 @@ state={
                             shadowColor: 'black',
                             shadowOpacity: 0.2,
                             elevation: 1,
-                            marginTop: Platform.OS == 'android' ? 30 : null
+                           
                         }}>
+                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain" style={styles.image} />
+
                             <TextInput
                                 underlineColorAndroid="transparent"
                                 placeholder="Search"
                                 placeholderTextColor="grey"
-                                style={{ flex: 1, fontWeight: '700', backgroundColor: 'white' }}
+                                style={{ flex: 1}}
                             />
-                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain"
-          style={styles.image1}
-        ></Image>
-          
+
+
           
               
                         </View>
@@ -83,12 +82,10 @@ state={
 export default Explore;
 
 const styles = StyleSheet.create({
-    image1: {
-        top: 0,
-        left: 270,
-        width: 60,
-        height: 54,
-        position: "absolute"
+    image: {
+
+        width:'10%',
+        height: '100%',
       },
     container: {
         flex: 1,
