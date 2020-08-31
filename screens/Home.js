@@ -18,14 +18,14 @@ import { FlatList } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get('window')
 const axios = require('axios')
-
+const api_key = 
 class Explore extends Component {
 state={
     vid : '',
 };
 
    async componentDidMount(){
-       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ')
+       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=${api_key}')
         .then(response => {
             //console.log(response);
          response.data.items
