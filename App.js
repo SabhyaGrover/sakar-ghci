@@ -16,7 +16,7 @@ const Tab = createMaterialBottomTabNavigator()
 
 function HomeScreen(){
   return(
-    <Tab.Navigator>
+    <Tab.Navigator barstyle={{backgroundColor: '#481480'}}>
         <Tab.Screen name = 'Home' component = {Home}/>
         <Tab.Screen name='ToDo' component={Todo}/>
     </Tab.Navigator>

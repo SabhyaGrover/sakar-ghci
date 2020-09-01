@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons'
 
-import Category from '../components/Categoryscroller added'
+import Category from '../components/Category'
 
 const { height, width } = Dimensions.get('window')
 
