@@ -9,23 +9,36 @@ import {
     StatusBar,
     ScrollView,
     Image,
-    Dimensions
+    Dimensions,
+    requireNativeComponent,
 } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons'
-
-import Category from '../components/Category'
+import Icon from 'react-native-vector-icons/Ionicons';
+import Category from '../components/Card';
+import { FlatList } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get('window')
-
+const axios = require('axios')
+const api_key = 
 class Explore extends Component {
+state={
+    vid : '',
+};
 
-    componentWillMount() {
-        this.startHeaderHeight = 80
-        if (Platform.OS == 'android') {
-            this.startHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
+   async componentDidMount(){
+       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=${api_key}')
+        .then(response => {
+            //console.log(response);
+         response.data.items
+            this.setState({
+                vid : response.data.items,
+            });
 
+            console.log(vid);
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    };
     render() {
         return (
             <SafeAreaView style={{ flex: 1 }}>
@@ -40,58 +53,28 @@ class Explore extends Component {
                             elevation: 1,
                             marginTop: Platform.OS == 'android' ? 30 : null
                         }}>
-                            <Icon name="ios-search" size={20} style={{ marginRight: 10 }} />
                             <TextInput
                                 underlineColorAndroid="transparent"
-                                placeholder="Try New Delhi"
+                                placeholder="Search"
                                 placeholderTextColor="grey"
                                 style={{ flex: 1, fontWeight: '700', backgroundColor: 'white' }}
                             />
+                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain"
+          style={styles.image1}
+        ></Image>
+          
+          
+              
                         </View>
                     </View>
-                    <ScrollView
-                        scrollEventThrottle={16}
-                    >
-                        <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
-                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
-                                What can we help you find, Varun?
-                            </Text>
 
-                            <View style={{ height: 130, marginTop: 20 }}>
-                                <ScrollView
-                                    horizontal={true}
-                                    showsHorizontalScrollIndicator={false}
-                                >
-                                    <Category imageUri={require('../assets/images/architecture-audi-automotive-1545743.jpg')}
-                                        name="Home"
+                                    <FlatList
+                                        data={this.state.vid}
+                                        renderItem={({ item }) =>{
+                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id}`}/>
+                                        }
+                                    }
                                     />
-                                    <Category imageUri={require('../assets/images/accessories-accessory-boots-322207.jpg')}
-                                        name="Experiences"
-                                    />
-                                    <Category imageUri={require('../assets/images/architecture-audi-automotive-1545743.jpg')}
-                                        name="Resturant"
-                                    />
-                                </ScrollView>
-                            </View>
-                            <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
-                                    Introducing Airbnb Plus
-                                </Text>
-                                <Text style={{ fontWeight: '100', marginTop: 10 }}>
-                                    A new selection of homes verified for quality & comfort
-
-                                </Text>
-                                <View style={{ width: width - 40, height: 200, marginTop: 20 }}>
-                                    <Image
-                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={require('../assets/images/architecture-audi-automotive-1545743.jpg')}
-                                    />
-
-                                </View>
-                            </View>
-                        </View>
-                    </ScrollView>
-
                 </View>
             </SafeAreaView>
         );
@@ -100,6 +83,13 @@ class Explore extends Component {
 export default Explore;
 
 const styles = StyleSheet.create({
+    image1: {
+        top: 0,
+        left: 270,
+        width: 60,
+        height: 54,
+        position: "absolute"
+      },
     container: {
         flex: 1,
         alignItems: 'center',
