@@ -18,7 +18,6 @@ import { FlatList } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get('window')
 const axios = require('axios')
-const api_key = 
 class Explore extends Component {
 state={
     vid : '',
