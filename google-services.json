@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "287500585179",
+    "firebase_url": "https://sakar-287519.firebaseio.com",
+    "project_id": "sakar-287519",
+    "storage_bucket": "sakar-287519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287500585179:android:ea980941ebf4d9565d64fe",
+        "android_client_info": {
+          "package_name": "com.hobbyhacks.sakar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287500585179-ms4uk983p3sg1a8if0pseunvaf2a29s6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6G-XE8CJaRcW1kT9d-zP9XfXM432xQ9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287500585179-ms4uk983p3sg1a8if0pseunvaf2a29s6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

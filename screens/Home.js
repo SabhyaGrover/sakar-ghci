@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState }from "react";
 import {
     View,
     Text,
@@ -15,20 +15,35 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import Category from '../components/Card';
 import { FlatList } from "react-native-gesture-handler";
-
+import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 const { height, width } = Dimensions.get('window')
 const axios = require('axios')
 
+
+
 class Explore extends Component {
+
 state={
     vid : '',
+    search:'',
+    value:'',
+
+};
+
+
+handleSearch = event => {
+    //const search_api = process.env.SEARCH_API_KEY
+    this.setState({
+        search:event.target.value,
+    });
+    //console.log(search);
 };
 
    async componentDidMount(){
        await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ')
-        .then(response => {
+       .then(response => {
             //console.log(response);
-         response.data.items
+         //console.log(response.data.items)
             this.setState({
                 vid : response.data.items,
             });
@@ -52,19 +67,21 @@ state={
                             elevation: 1,
                            
                         }}>
-                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain" style={styles.image} />
+                            <Image source={require("../assets/images/logo-removebg.png")} resizeMode="contain" style={styles.image} size={30}/>
 
                             <TextInput
                                 underlineColorAndroid="transparent"
                                 placeholder="Search"
                                 placeholderTextColor="grey"
                                 style={{ flex: 1}}
+                                value={this.state.search}
+                                onChange={this.handleSearch}
+
                             />
-
-
-          
-              
+                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} onPress={cons}/>
+                               
                         </View>
+
                     </View>
 
                                     <FlatList
@@ -91,5 +108,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-    }
+    },
+    icon: {
+        color: "black",
+        justifyContent:'center',
+        alignSelf: "center",
+
+      },
 });
