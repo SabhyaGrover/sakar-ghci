@@ -40,7 +40,7 @@ handleSearch = event => {
 };
 
    async componentDidMount(){
-       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ')
+       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=')
        .then(response => {
             //console.log(response);
          //console.log(response.data.items)
