@@ -8,6 +8,8 @@ import SignUp from './screens/SignUp';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
+import leaderboard from './screens/leaderboard';
+
 import { NavigationContainer } from '@react-navigation/native';
 //import { render } from 'react-dom';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -33,6 +35,13 @@ function HomeScreen(){
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
+
+          <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
+          tabBarLabel: 'ToDo',
+          tabBarIcon: ({  tintColor }) => (
+                <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
+          )}}/>
+
     </Tab.Navigator>
     
   );
@@ -47,6 +56,8 @@ export default function App() {
         <Stack.Screen name = 'login' component = { login } />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
+        <Stack.Screen name = 'leaderboard' component = {leaderboard } />
+
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>

@@ -78,8 +78,8 @@ handleSearch = event => {
                                 onChange={this.handleSearch}
 
                             />
-                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} onPress={cons}/>
-                               
+                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} />
+
                         </View>
 
                     </View>
