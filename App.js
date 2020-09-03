@@ -37,7 +37,7 @@ function HomeScreen(){
           )}}/>
 
           <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
-          tabBarLabel: 'ToDo',
+          tabBarLabel: 'Board',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
