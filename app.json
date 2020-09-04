@@ -20,7 +20,8 @@
     },
     "android": {
       "package": "com.hobbyhacks.sakar",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true
     }
   }
 }
