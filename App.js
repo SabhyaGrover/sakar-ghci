@@ -8,7 +8,6 @@ import SignUp from './screens/SignUp';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
-import leaderboard from './screens/leaderboard';
 
 import { NavigationContainer } from '@react-navigation/native';
 //import { render } from 'react-dom';
