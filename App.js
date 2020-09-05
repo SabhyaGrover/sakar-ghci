@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {StyleSheet} from 'react-native';
 //import MaterialIconButtonsFooter from './components/MaterialIconButtonsFooter';
 import login from './screens/login';
@@ -8,12 +7,15 @@ import SignUp from './screens/SignUp';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
-
+import leaderboard from './screens/leaderboard';
+import demologin from '../sakar-ghci/screens/demologin';
+import Registration from './screens/Registration';
 import { NavigationContainer } from '@react-navigation/native';
 //import { render } from 'react-dom';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
+
 
 const Stack = createStackNavigator()
 const Tab = createMaterialBottomTabNavigator()
@@ -36,7 +38,7 @@ function HomeScreen(){
           )}}/>
 
           <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
-          tabBarLabel: 'Board',
+          tabBarLabel: 'ToDo',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
@@ -48,11 +50,19 @@ function HomeScreen(){
 
 
 export default function App() {
+ 
+  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState(null)
+  
+
+  
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
       
-        <Stack.Screen name = 'login' component = { login } />
+        <Stack.Screen name = 'login' component = { demologin} />
+        <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'leaderboard' component = {leaderboard } />
@@ -70,7 +80,3 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
 });
-
-
- 
-  
