@@ -1,20 +1,18 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {StyleSheet} from 'react-native';
-//import MaterialIconButtonsFooter from './components/MaterialIconButtonsFooter';
-import login from './screens/login';
-//import footer from './screens/footer';
-import SignUp from './screens/SignUp';
+
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
-import Explore from './screens/Home';
+import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
-//sssimport search from './screens/searchbar';
+import demologin from './screens/demologin';
+import Registration from './screens/Registration';
 import { NavigationContainer } from '@react-navigation/native';
-//import { render } from 'react-dom';
+
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
+
 
 const Stack = createStackNavigator()
 const Tab = createMaterialBottomTabNavigator()
@@ -24,7 +22,7 @@ function HomeScreen(){
 
     <Tab.Navigator barStyle = {{ backgroundColor : '#481480' }}>
             <Tab.Screen
-         name = 'Home' component = {Explore} options={{
+         name = 'Home' component = {Home} options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
@@ -49,12 +47,16 @@ function HomeScreen(){
 
 
 export default function App() {
+ 
+  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState(null)
+  
   return (
     <NavigationContainer>
       <Stack.Navigator>
       
-        <Stack.Screen name = 'login' component = { login } />
-        <Stack.Screen name = 'SignUp' component = { SignUp } />
+        <Stack.Screen name = 'login' component = { demologin} />
+        <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'leaderboard' component = {leaderboard } />
 
@@ -71,7 +73,3 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
 });
-
-
- 
-  

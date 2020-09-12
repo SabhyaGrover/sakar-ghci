@@ -16,36 +16,31 @@ import {
 import Category from '../components/Card';
 import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
-import {reducer} from '../reducers/reducer';
-import {Provider, useDispatch} from 'react-redux';
-import { createStore} from 'redux'
+//import {reducer} from '../reducers/reducer';
+//import {Provider, useDispatch} from 'react-redux';
+//import { createStore} from 'redux'
 //const { height, width } = Dimensions.get('window')
 const axios = require('axios')
-const store = createStore(reducer)
-const dispatch = useDispatch()
-export default class Explore extends Component {
+//const store = createStore(reducer)
+//const dispatch = useDispatch()
+export default class Home extends Component {
     
-constructor(props)
-{
-    super(props);
-    this.state = {
+state = {
         vid : '',
         search:'',
-        isQuery:false,
+        //isQuery:false,
     };
-}
 
 searchVid = event => {
     event.preventDefault();
     console.log(this.state.search);
     const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.search}&type=video&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
     axios.get(fetch_vid)
-    .then(response => response.json())
-    .then(data =>{
-        dispatch({
-            type:"add",
-            payload:data.items
-        })
+    .then( response => {
+        console.log(this.state.search);
+        this.setState({
+        vid : response.data.items
+    })
     })
     .catch(function(error){
         console.log(error)
@@ -68,8 +63,7 @@ async componentDidMount(){
     };
 
     render() {
-        return (
-            <Provider store={store} >
+        return(
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1}}>
                     <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
@@ -110,9 +104,9 @@ async componentDidMount(){
                                     />
                 </View>
             </SafeAreaView>
-            </Provider>
+
         );
-    }
+    };
 }
 
 
