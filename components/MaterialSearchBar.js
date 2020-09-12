@@ -1,28 +1,31 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { StyleSheet, View, TouchableOpacity, TextInput } from "react-native";
+import { event } from "react-native-reanimated";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+export default ({onSubmit}) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleChange = (event) => {
+    setSearchTerm(searchTerm);
+  }
 
-function MaterialSearchBar(props) {
+  const onKeyPress = (event) => {
+    if(event.key === 'Enter')
+    {
+      onSubmit(searchTerm);
+    }
+  }
   return (
-    <View style={[styles.container, props.style]}>
-      <View gradientImage="Gradient_wvmVquI.png" style={styles.rect1}>
-        <View style={styles.leftIconButtonRow}>
-          <TouchableOpacity style={styles.leftIconButton}>
-            <MaterialCommunityIconsIcon
-              name="arrow-left"
-              style={styles.leftIcon}
-            ></MaterialCommunityIconsIcon>
-          </TouchableOpacity>
-          <TextInput placeholder="Search" style={styles.inputStyle}></TextInput>
-        </View>
-        <View style={styles.leftIconButtonRowFiller}></View>
-        <TouchableOpacity style={styles.rightIconButton}>
-          <MaterialCommunityIconsIcon
-            name="close"
-            style={styles.rightIcon}
-          ></MaterialCommunityIconsIcon>
-        </TouchableOpacity>
-      </View>
+    <View >
+                  <TextInput
+                                underlineColorAndroid="transparent"
+                                placeholder="Search..."
+                                placeholderTextColor="grey"
+                                style={{ flex: 1}}
+                                value = {searchTerm}
+                                onChangeText={handleChange}
+                                onKeyPress={onKeyPress}
+
+                      />
     </View>
   );
 }
@@ -81,4 +84,3 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MaterialSearchBar;

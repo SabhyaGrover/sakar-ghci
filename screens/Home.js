@@ -12,21 +12,15 @@ import {
     Dimensions,
     requireNativeComponent,
 } from "react-native";
-//import Icon from 'react-native-vector-icons/Ionicons';
 import Category from '../components/Card';
 import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
-//import {reducer} from '../reducers/reducer';
-//import {Provider, useDispatch} from 'react-redux';
-//import { createStore} from 'redux'
-//const { height, width } = Dimensions.get('window')
 const axios = require('axios')
-//const store = createStore(reducer)
-//const dispatch = useDispatch()
-export default class Home extends Component {
+const interest = ['web development','app development','machine learning','iot','data science']
+export default class Explore extends Component {
     
 state = {
-        vid : '',
+        vid : [],
         search:'',
         //isQuery:false,
     };
@@ -49,7 +43,12 @@ searchVid = event => {
 
 
 async componentDidMount(){
-       await axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`)
+    if(this.state.search === '')
+    {
+        var randNum = Math.floor(Math.random()*interest.length)
+        var keyword = interest[randNum] ;
+        console.log(keyword)
+       await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${keyword}&type=video&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`)
        .then(response => {
             //console.log(response);
          //console.log(response.data.items)
@@ -60,7 +59,10 @@ async componentDidMount(){
         .catch(function(error){
             console.log(error)
         })
-    };
+
+    }
+};
+
 
     render() {
         return(

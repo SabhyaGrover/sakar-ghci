@@ -13,6 +13,7 @@ class Category extends Component {
                 <View style={{ flex: 2 }}>
                     <Image source={{uri:`https://i.ytimg.com/vi/${this.props.videoId}/hqdefault.jpg`}}
                         style={styles.Image}
+                        alt = 'thumbnail'
                     />
                 </View>
                 <View style={styles.body}>
