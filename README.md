@@ -33,10 +33,10 @@
     <img src="assets/icon.png" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">सakar</h3>
+  <h1 align="center">सakar</h1>
 
   <p align="center">
-    #MakeYourDreamSakar
+  <b>#MakeYourDreamSakar</b>
     <br />
     <a href="https://github.com/SabhyaGrover/sakar-ghci">View Demo</a>
     .
@@ -68,6 +68,7 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 SAKAR is a platform where students can have distraction free learning. As we call it, it is "NETFLIX for LEARNERS". Due to COVID, when offline learning got hindered, E-learning
 came to the fore-front. There are various resources available on the web but there is no common platform that connects all the educational content without any diversions. SAKAR is the straight road to learning that every learner needs.
 
@@ -96,7 +97,7 @@ npm install npm@latest -g
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/SabhyaGrover/sakar-ghci.git
 ```
 3. Install NPM packages
 ```sh
