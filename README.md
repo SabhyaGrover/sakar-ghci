@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<h1 align="center">Welcome to sakar-ghci 👋</h1>
-<p>
-  <a href="#" target="_blank">
-    <img alt="License:  GPL--3.0 License" src="https://img.shields.io/badge/License- GPL--3.0 License-yellow.svg" />
-  </a>
-  <a href="https://twitter.com/GroverSabhya" target="_blank">
-    <img alt="Twitter: GroverSabhya" src="https://img.shields.io/twitter/follow/GroverSabhya.svg?style=social" />
-=======
 <!--
 *** Thanks for checking out this README Template. If you have a suggestion that would
 *** make this better, please fork the repo and create a pull request or simply open
@@ -26,7 +17,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -40,25 +31,118 @@
 <p align="center">
   <a href="https://github.com/SabhyaGrover/sakar-ghci">
     <img src="assets/icon.png" alt="Logo" width="250" height="250">
->>>>>>> 8c6dd517c825ac918d1ebb88283366171375e80f
   </a>
+
+  <h1 align="center">सakar</h1>
+
+  <p align="center">
+  <b>#MakeYourDreamSakar</b>
+    <br />
+    <a href="https://github.com/SabhyaGrover/sakar-ghci">View Demo</a>
+    .
+    <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Request Feature</a>
+  </p>
 </p>
 
 > A Distraction Free App for Learning Online, from any source available.
 
 ### 🏠 [Homepage](https://github.com/SabhyaGrover/sakar-ghci)
 
-## Install
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+
+
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+SAKAR is a platform where students can have distraction free learning. As we call it, it is "NETFLIX for LEARNERS". Due to COVID, when offline learning got hindered, E-learning
+came to the fore-front. There are various resources available on the web but there is no common platform that connects all the educational content without any diversions. SAKAR is the straight road to learning that every learner needs.
+
+
+### Built With
+
+* [React-Native](https://reactnative.dev/)
+* [Firebase](https://firebase.google.com/)
+
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
 ```sh
-npm install
+npm install npm@latest -g
 ```
 
-## Usage
+### Installation
 
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
 ```sh
-npm run start
+git clone https://github.com/SabhyaGrover/sakar-ghci.git
 ```
+3. Install NPM packages
+```sh
+npm install -g expo-cli
+```
+```sh
+npm i
+```
+4. Start the expo
+```sh
+npm start
+```
+5. Download Expo Application from PlayStore.
+
+6. Scan the QR Code to run the App on your phone.
+
+
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+
+
+
 
 ## Author
 

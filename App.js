@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {StyleSheet} from 'react-native';
-
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
@@ -39,6 +38,7 @@ function HomeScreen(){
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
+           
 
     </Tab.Navigator>
     
