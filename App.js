@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {StyleSheet} from 'react-native';
 //import MaterialIconButtonsFooter from './components/MaterialIconButtonsFooter';
-import login from './screens/login';
 //import footer from './screens/footer';
-import SignUp from './screens/SignUp';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
@@ -38,10 +36,11 @@ function HomeScreen(){
           )}}/>
 
           <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
-          tabBarLabel: 'ToDo',
+          tabBarLabel: 'LeaderBoard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
+           
 
     </Tab.Navigator>
     
@@ -54,16 +53,12 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
   
-
-  
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
       
         <Stack.Screen name = 'login' component = { demologin} />
         <Stack.Screen name="Registration" component={Registration} />
-        <Stack.Screen name = 'SignUp' component = { SignUp } />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'leaderboard' component = {leaderboard } />
 
