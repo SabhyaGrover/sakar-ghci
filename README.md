@@ -17,7 +17,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -29,14 +29,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/SabhyaGrover/sakar-ghci">
+  <a href="https://github.com/SabhyaGrover/sakar-ghci" >
     <img src="assets/icon.png" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">सakar</h3>
+  <h1 align="center">सakar</h1>
 
   <p align="center">
-    #MakeYourDreamSakar
+  <b>#MakeYourDreamSakar</b>
     <br />
     <a href="https://github.com/SabhyaGrover/sakar-ghci">View Demo</a>
     .
@@ -69,30 +69,20 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+SAKAR is a platform where students can have distraction free learning. As we call it, it is "NETFLIX for LEARNERS". Due to COVID, when offline learning got hindered, E-learning
+came to the fore-front. There are various resources available on the web but there is no common platform that connects all the educational content without any diversions. SAKAR is the straight road to learning that every learner needs.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+
+* [React-Native](https://reactnative.dev/)
+* [Firebase](https://firebase.google.com/)
+
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -104,28 +94,34 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+
+1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/SabhyaGrover/sakar-ghci.git
 ```
-3. Install NPM packages
+2. Install NPM packages
 ```sh
-npm install
+npm install -g expo-cli
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+```sh
+npm i
 ```
+3. Get your YouTube API key [here](https://developers.google.com/youtube/v3/getting-started). Replace **`API_KEY=XXXXXXXXXX`** with your own YouTube API key.
+
+```sh
+
+const API_KEY = 'XXXXXXXXXXXX'; // REPLACE IT WITH YOUR YOUTUBE API KEY
+
+```
+4. Start the expo
+```sh
+npm start
+```
+5. Download Expo Application from PlayStore.
+
+6. Scan the QR Code to run the App on your phone.
 
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
