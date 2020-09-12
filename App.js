@@ -7,9 +7,9 @@ import login from './screens/login';
 import SignUp from './screens/SignUp';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
-import Home from './screens/Home';
+import Explore from './screens/Home';
 import leaderboard from './screens/leaderboard';
-
+//sssimport search from './screens/searchbar';
 import { NavigationContainer } from '@react-navigation/native';
 //import { render } from 'react-dom';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -24,7 +24,7 @@ function HomeScreen(){
 
     <Tab.Navigator barStyle = {{ backgroundColor : '#481480' }}>
             <Tab.Screen
-         name = 'Home' component = {Home} options={{
+         name = 'Home' component = {Explore} options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />

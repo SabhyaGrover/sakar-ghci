@@ -12,35 +12,49 @@ import {
     Dimensions,
     requireNativeComponent,
 } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons';
+//import Icon from 'react-native-vector-icons/Ionicons';
 import Category from '../components/Card';
 import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
-const { height, width } = Dimensions.get('window')
+import {reducer} from '../reducers/reducer';
+import {Provider, useDispatch} from 'react-redux';
+import { createStore} from 'redux'
+//const { height, width } = Dimensions.get('window')
 const axios = require('axios')
+const store = createStore(reducer)
+const dispatch = useDispatch()
+export default class Explore extends Component {
+    
+constructor(props)
+{
+    super(props);
+    this.state = {
+        vid : '',
+        search:'',
+        isQuery:false,
+    };
+}
+
+searchVid = event => {
+    event.preventDefault();
+    console.log(this.state.search);
+    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.search}&type=video&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
+    axios.get(fetch_vid)
+    .then(response => response.json())
+    .then(data =>{
+        dispatch({
+            type:"add",
+            payload:data.items
+        })
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+    };
 
 
-
-class Explore extends Component {
-
-state={
-    vid : '',
-    search:'',
-    value:'',
-
-};
-
-
-handleSearch = event => {
-    //const search_api = process.env.SEARCH_API_KEY
-    this.setState({
-        search:event.target.value,
-    });
-    //console.log(search);
-};
-
-   async componentDidMount(){
-       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=')
+async componentDidMount(){
+       await axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`)
        .then(response => {
             //console.log(response);
          //console.log(response.data.items)
@@ -52,8 +66,10 @@ handleSearch = event => {
             console.log(error)
         })
     };
+
     render() {
         return (
+            <Provider store={store} >
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1}}>
                     <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
@@ -74,29 +90,31 @@ handleSearch = event => {
                                 placeholder="Search"
                                 placeholderTextColor="grey"
                                 style={{ flex: 1}}
+                                onChangeText={search => this.setState({search})}
                                 value={this.state.search}
-                                onChange={this.handleSearch}
 
                             />
-                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} />
+                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} onPress={this.searchVid}/>
 
                         </View>
 
                     </View>
 
                                     <FlatList
+
                                         data={this.state.vid}
                                         renderItem={({ item }) =>{
-                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id}`}/>
+                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id.videoId}`}/>
                                         }
                                     }
                                     />
                 </View>
             </SafeAreaView>
+            </Provider>
         );
     }
 }
-export default Explore;
+
 
 const styles = StyleSheet.create({
     image: {
