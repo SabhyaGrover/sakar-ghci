@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {StyleSheet} from 'react-native';
 //import MaterialIconButtonsFooter from './components/MaterialIconButtonsFooter';
 //import footer from './screens/footer';
+import profile from './screens/profile';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
@@ -40,7 +41,12 @@ function HomeScreen(){
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
-           
+           <Tab.Screen
+         name = 'profile' component = {profile} options={{
+          tabBarLabel: 'profile',
+          tabBarIcon: ({  tintColor }) => (
+                <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
+          )}} /> 
 
     </Tab.Navigator>
     
@@ -61,6 +67,8 @@ export default function App() {
         <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'leaderboard' component = {leaderboard } />
+        <Stack.Screen name = 'profile' component = { profile} />
+
 
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
         </Stack.Navigator>
