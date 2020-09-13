@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-import MaterialSearchBar4 from "../components/MaterialSearchBar4";
 import MaterialSearchBar5 from "../components/MaterialSearchBar5";
 
 function Untitled6(props) {
@@ -30,9 +29,9 @@ function Untitled6(props) {
       </View>
       <View style={styles.usernameRow}>
         <Text style={styles.username}>Username</Text>
-        <MaterialSearchBar4
-          style={styles.materialSearchBar4}
-        ></MaterialSearchBar4>
+        <View style={styles.rect5}>
+          <Text style={styles.kristi}>Kristi</Text>
+        </View>
       </View>
       <View style={styles.emailRow}>
         <Text style={styles.email}>Email</Text>
@@ -76,6 +75,7 @@ const styles = StyleSheet.create({
     height: 35,
     borderWidth: 1,
     borderColor: "rgba(155,155,155,1)",
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 55
   },
   icon3: {
@@ -119,17 +119,27 @@ const styles = StyleSheet.create({
   },
   username: {
     color: "#121212",
-    fontSize: 23,
-    marginTop: 20
+    fontSize: 23
   },
-  materialSearchBar4: {
-    height: 52,
+  rect5: {
     width: 161,
+    height: 36,
+    borderWidth: 1,
+    borderColor: "rgba(155,155,155,1)",
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 27
   },
+  kristi: {
+    fontFamily: "roboto-regular",
+    color: "rgba(74,74,74,1)",
+    lineHeight: 35,
+    fontSize: 19,
+    marginLeft: 45
+  },
   usernameRow: {
-    height: 52,
+    height: 36,
     flexDirection: "row",
+    marginTop: 29,
     marginLeft: 31,
     marginRight: 36
   },
@@ -141,12 +151,13 @@ const styles = StyleSheet.create({
   materialSearchBar5: {
     height: 60,
     width: 161,
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 75
   },
   emailRow: {
     height: 60,
     flexDirection: "row",
-    marginTop: 97,
+    marginTop: 84,
     marginLeft: 31,
     marginRight: 36
   },
@@ -159,6 +170,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderWidth: 1,
     borderColor: "rgba(155,155,155,1)",
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 58
   },
   female: {
@@ -184,6 +196,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderWidth: 1,
     borderColor: "rgba(155,155,155,1)",
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 95
   },
   female1: {
@@ -209,6 +222,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderWidth: 1,
     borderColor: "rgba(155,155,155,1)",
+    backgroundColor: "rgba(230,188,253,1)",
     marginLeft: 64
   },
   india: {
