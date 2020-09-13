@@ -251,7 +251,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(74,74,74,1)"
   },
   rank: {
-    fontFamily: "roboto-700",
     color: "#121212",
     marginTop: 4,
     marginLeft: 8
@@ -270,7 +269,6 @@ const styles = StyleSheet.create({
     top: 5,
     left: 7,
     position: "absolute",
-    fontFamily: "roboto-700",
     color: "#121212",
     height: 17,
     width: 69
@@ -289,7 +287,6 @@ const styles = StyleSheet.create({
     marginLeft: 6
   },
   badges: {
-    fontFamily: "roboto-700",
     color: "#121212",
     width: 50,
     height: 17,
@@ -308,14 +305,12 @@ const styles = StyleSheet.create({
     top: 12,
     left: 9,
     position: "absolute",
-    fontFamily: "roboto-700",
     color: "#121212"
   },
   region2: {
     top: 0,
     left: 0,
     position: "absolute",
-    fontFamily: "roboto-700",
     color: "#121212",
     width: 44,
     height: 17
@@ -341,7 +336,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   loremIpsum2: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 4,
@@ -357,7 +351,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   mishi: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 5,
@@ -406,7 +399,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   india: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 4,
@@ -427,7 +419,6 @@ const styles = StyleSheet.create({
     marginTop: 7
   },
   loremIpsum4: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     width: 16,
     height: 23,
@@ -445,7 +436,6 @@ const styles = StyleSheet.create({
     marginTop: 9
   },
   roop: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 5,
@@ -483,7 +473,6 @@ const styles = StyleSheet.create({
     marginTop: 9
   },
   nilgeria: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 2,
@@ -508,7 +497,6 @@ const styles = StyleSheet.create({
     top: 4,
     left: 8,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     width: 123,
@@ -532,7 +520,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(155,155,155,1)"
   },
   vinesh: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 8,
@@ -586,7 +573,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   algeria: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 3,
@@ -612,7 +598,6 @@ const styles = StyleSheet.create({
     top: 3,
     left: 8,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19
   },
@@ -631,7 +616,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   mahi: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 3,
@@ -669,7 +653,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   italy: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 7,
@@ -690,7 +673,6 @@ const styles = StyleSheet.create({
     marginTop: 6
   },
   loremIpsum7: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 4,
@@ -706,7 +688,6 @@ const styles = StyleSheet.create({
     marginTop: 6
   },
   tanishq: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 2,
@@ -744,7 +725,6 @@ const styles = StyleSheet.create({
     marginTop: 6
   },
   india2: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 4,
@@ -765,7 +745,6 @@ const styles = StyleSheet.create({
     marginTop: 6
   },
   loremIpsum8: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 4,
@@ -781,7 +760,6 @@ const styles = StyleSheet.create({
     marginTop: 7
   },
   elle: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     width: 25,
     height: 17,
@@ -831,7 +809,6 @@ const styles = StyleSheet.create({
     marginTop: 7
   },
   uk: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 7,
@@ -851,7 +828,6 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   loremIpsum9: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 4,
@@ -867,7 +843,6 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   jill: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 3,
@@ -907,7 +882,6 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   india3: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 7,
@@ -927,7 +901,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(155,155,155,1)"
   },
   loremIpsum11: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 1,
@@ -942,7 +915,6 @@ const styles = StyleSheet.create({
     marginTop: 12
   },
   loremIpsum12: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 1,
@@ -964,7 +936,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(155,155,155,1)"
   },
   greece: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     width: 49,
     height: 17,
@@ -976,7 +947,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 9,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     width: 47,
@@ -1057,7 +1027,6 @@ const styles = StyleSheet.create({
     borderColor: "#000000"
   },
   loremIpsum3: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 12,
     marginTop: 1,
@@ -1081,7 +1050,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(155,155,155,1)"
   },
   parag: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 3,
@@ -1124,7 +1092,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(155,155,155,1)"
   },
   hitesh: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 4,
@@ -1150,7 +1117,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   loremIpsum10: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 19,
     marginTop: 4,
@@ -1166,7 +1132,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   kristi: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     height: 18,
@@ -1208,7 +1173,6 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   india4: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 15,
     marginTop: 6,
@@ -1230,7 +1194,6 @@ const styles = StyleSheet.create({
     marginTop: 123
   },
   loremIpsum14: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     marginTop: 10
   },
@@ -1242,7 +1205,6 @@ const styles = StyleSheet.create({
     marginLeft: 72
   },
   india5: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     marginLeft: 41,
     marginTop: 10
@@ -1264,7 +1226,6 @@ const styles = StyleSheet.create({
     marginTop: -62
   },
   loremIpsum13: {
-    fontFamily: "roboto-700",
     color: "#121212",
     marginTop: 7,
     marginLeft: 12

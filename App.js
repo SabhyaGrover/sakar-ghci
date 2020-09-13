@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,Component} from 'react';
 import {StyleSheet} from 'react-native';
 import Todo from './screens/Todo';
 import Interests from './screens/Interests';
@@ -24,7 +24,7 @@ function HomeScreen(){
          name = 'Home' component = {Home} options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({  tintColor }) => (
-                <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
+                <EvilIconsIcon name="tag" style={styles.icon} color={tintColor} size={25} />
           )}} />
 
         <Tab.Screen name='ToDo' component={Todo} options={{
