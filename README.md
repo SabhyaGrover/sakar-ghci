@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/SabhyaGrover/sakar-ghci">
+  <a href="https://github.com/SabhyaGrover/sakar-ghci" >
     <img src="assets/icon.png" alt="Logo" width="250" height="250">
   </a>
 
@@ -96,17 +96,24 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+
+1. Clone the repo
 ```sh
 git clone https://github.com/SabhyaGrover/sakar-ghci.git
 ```
-3. Install NPM packages
+2. Install NPM packages
 ```sh
 npm install -g expo-cli
 ```
 ```sh
 npm i
+```
+3. Get your YouTube API key [here](https://developers.google.com/youtube/v3/getting-started). Replace **`API_KEY=XXXXXXXXXX`** with your own YouTube API key.
+
+```sh
+
+const API_KEY = 'XXXXXXXXXXXX'; // REPLACE IT WITH YOUR YOUTUBE API KEY
+
 ```
 4. Start the expo
 ```sh

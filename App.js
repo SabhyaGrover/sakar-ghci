@@ -38,7 +38,12 @@ function HomeScreen(){
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
-           
+           <Tab.Screen
+         name = 'profile' component = {profile} options={{
+          tabBarLabel: 'profile',
+          tabBarIcon: ({  tintColor }) => (
+                <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
+          )}} /> 
 
     </Tab.Navigator>
     
@@ -59,6 +64,8 @@ export default function App() {
         <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name = 'Interest' component = { Interests } />
         <Stack.Screen name = 'leaderboard' component = {leaderboard } />
+        <Stack.Screen name = 'profile' component = { profile} />
+
 
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
         </Stack.Navigator>
