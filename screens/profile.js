@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   badges: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23,
     marginTop: 3
@@ -106,7 +105,6 @@ const styles = StyleSheet.create({
     width: 146
   },
   myProfile: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 25,
     marginLeft: 23,
@@ -120,7 +118,6 @@ const styles = StyleSheet.create({
     marginRight: 90
   },
   username: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23,
     marginTop: 20
@@ -137,7 +134,6 @@ const styles = StyleSheet.create({
     marginRight: 36
   },
   email: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23,
     marginTop: 28
@@ -155,7 +151,6 @@ const styles = StyleSheet.create({
     marginRight: 36
   },
   gender: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23
   },
@@ -167,7 +162,6 @@ const styles = StyleSheet.create({
     marginLeft: 58
   },
   female: {
-    fontFamily: "roboto-regular",
     color: "rgba(74,74,74,1)",
     lineHeight: 35,
     fontSize: 19,
@@ -182,7 +176,6 @@ const styles = StyleSheet.create({
     marginRight: 36
   },
   age2: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23
   },
@@ -194,7 +187,6 @@ const styles = StyleSheet.create({
     marginLeft: 95
   },
   female1: {
-    fontFamily: "roboto-regular",
     color: "rgba(74,74,74,1)",
     lineHeight: 35,
     fontSize: 22,
@@ -209,7 +201,6 @@ const styles = StyleSheet.create({
     marginRight: 33
   },
   region: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 23
   },
@@ -221,7 +212,6 @@ const styles = StyleSheet.create({
     marginLeft: 64
   },
   india: {
-    fontFamily: "roboto-regular",
     color: "rgba(74,74,74,1)",
     lineHeight: 35,
     fontSize: 22,

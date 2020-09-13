@@ -6,6 +6,8 @@ import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
 import demologin from './screens/demologin';
 import Registration from './screens/Registration';
+import profile from './screens/profile';
+
 import { NavigationContainer } from '@react-navigation/native';
 
 import { createStackNavigator } from '@react-navigation/stack';

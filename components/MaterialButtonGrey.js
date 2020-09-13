@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 23,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 16
   }

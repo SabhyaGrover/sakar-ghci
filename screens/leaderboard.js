@@ -234,7 +234,6 @@ const styles = StyleSheet.create({
     top: 68,
     left: 4,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 30
   },
