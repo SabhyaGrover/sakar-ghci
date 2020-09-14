@@ -121,11 +121,11 @@ npm start
 ## Team:
 
 
-| S.No. | Team Member Name | Role | GitHub Username |
+| S.No. | Team Member Name | LinkedIn | GitHub Username |
 | --------------- | --------------- | --------------- | --------------- |
-| 1. | Sabhya Grover | Backend Development | [@SabhyaGrover](https://github.com/SabhyaGrover) |
-| 2. | Chanchal Bansal | Frontend Developer| [@Chanchal1603](https://github.com/Chanchal1603)  |
-| 3. | Shalini Kumari | UI Designer/Frontend Developer | [@shalinikumari50](https://github.com/shalinikumari50)  |
+| 1. | Sabhya Grover | [@SabhyaGrover](https://www.linkedin.com/in/sabhyagrover/) | [@SabhyaGrover](https://github.com/SabhyaGrover) |
+| 2. | Chanchal Bansal | [@ChanchalBansal](https://www.linkedin.com/in/chanchal-bansal-4b6778193/)| [@Chanchal1603](https://github.com/Chanchal1603)  |
+| 3. | Shalini Kumari | [@ShaliniKumari](https://www.linkedin.com/in/shalinikumari50/) | [@shalinikumari50](https://github.com/shalinikumari50)  |
 
 
 
