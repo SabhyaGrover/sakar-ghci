@@ -22,9 +22,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-
-# Team-HobbyHacks
 # GHCI20 Codeathon
+## Team-HobbyHacks
+
 
 
 <!-- PROJECT LOGO -->
@@ -47,9 +47,7 @@
   </p>
 </p>
 
-> A Distraction Free App for Learning Online, from any source available.
 
-### 🏠 [Homepage](https://github.com/SabhyaGrover/sakar-ghci)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -79,6 +77,7 @@ came to the fore-front. There are various resources available on the web but the
 
 * [React-Native](https://reactnative.dev/)
 * [Firebase](https://firebase.google.com/)
+* [Expo](https://expo.io/)
 
 
 
@@ -163,5 +162,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
