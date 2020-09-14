@@ -35,7 +35,7 @@ searchVid = event => {
     event.preventDefault();
     //console.log(this.state.search);
 
-    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.search}&type=video&key=${API_KEY}`;
+    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${this.state.search}&type=video&key=${API_KEY}&channelType=show`;
     axios.get(fetch_vid)
     .then( response => {
         console.log(this.state.search);
@@ -56,7 +56,7 @@ async componentDidMount(){
         var keyword = interest[randNum] ;
 
         //console.log(keyword)
-       await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${keyword}&type=video&key=${API_KEY}`)
+       await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${keyword}&type=videot&key=${API_KEY}`)
        .then(response => {
             //console.log(response);
          //console.log(response.data.items)
@@ -112,7 +112,7 @@ async componentDidMount(){
 
                                         data={this.state.vid}
                                         renderItem={({ item }) =>{
-                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id.videoId}`}/>
+                                        return <Category title={`${item.snippet.title}`} description ={`${item.snippet.description}`}videoId={`${item.id.videoId}`}/>
                                         }
                                     }
                                     />

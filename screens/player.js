@@ -8,6 +8,7 @@ import MaterialButtonTransparentHamburger from "../components/MaterialButtonTran
 
 export default function player({route}){
 const {videoId} = route.params.params
+const {description} = route.params.params
 //console.log(route.params.params)
   return (
     <View style={styles.container}>
@@ -16,6 +17,7 @@ const {videoId} = route.params.params
         startInLoadingState
         javaScriptEnabled
         style={{flex:1}} />
+        <Text style={styles.loremIpsum}>{description}</Text>
 
           <View style={styles.discussionForumRow}>
             <Text style={styles.discussionForum}>Discussion Forum</Text>
@@ -32,7 +34,7 @@ const {videoId} = route.params.params
               style={styles.icon2}
             ></FontAwesomeIcon>
             <View style={styles.solvingRecursionColumn}>
-              <Text style={styles.solvingRecursion}>Solving Recursion</Text>
+              <Text style={styles.comments}>Solving Recursion</Text>
               <Text style={styles.loremIpsum}>
                 Lorem ipsum dolor sit amet dolor{"\n"}consectetuer
               </Text>
@@ -47,7 +49,7 @@ const {videoId} = route.params.params
             ></FontAwesomeIcon>
             <View style={styles.whatIsDpColumn}>
               <Text style={styles.whatIsDp}>What is dp?</Text>
-              <Text style={styles.loremIpsum1}>
+              <Text style={styles.loremIpsum}>
                 Lorem ipsum dolor sit amet dolor{"\n"}consectetuer
               </Text>
             </View>
@@ -139,13 +141,18 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     height: 300
     },
-  solvingRecursion: {
+  comments: {
     color: "#121212",
     fontSize: 20
   },
   loremIpsum: {
     color: "#121212",
-    fontSize: 18
+    fontSize: 15,
+    alignItems:'center',
+    marginTop:10,
+    marginLeft:10,
+    marginRight:10,
+    justifyContent:"center"
   },
   solvingRecursionColumn: {
     width: 266,
