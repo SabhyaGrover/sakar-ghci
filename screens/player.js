@@ -1,26 +1,24 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
+import { WebView } from 'react-native-webview';
+//import { useNavigation} from '@react-navigation/native';
 import MaterialSearchBar from "../components/MaterialSearchBar";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialUnderlineTextbox from "../components/MaterialUnderlineTextbox";
 import MaterialButtonTransparentHamburger from "../components/MaterialButtonTransparentHamburger";
-
-function Untitled(props) {
+//const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
+//const navigation = useNavigation();
+export default function player({route}){
+const {videoId} = route.params.videoId
   return (
     <View style={styles.container}>
       <View style={styles.group}>
-        <View style={styles.imageRow}>
-          <Image
-            source={require("../assets/images/logo-removebg.png")}
-            resizeMode="contain"
-            style={styles.image}
-          ></Image>
-          <MaterialSearchBar
-            style={styles.materialSearchBar}
-          ></MaterialSearchBar>
-        </View>
-        <View style={styles.rect}>
+      <WebView source ={{ uri:`https://www.youtube.com/embed/s1jZtcStl5g`}}
+        startInLoadingState
+        javaScriptEnabled
+        style={{flex:1}} />
+
           <View style={styles.discussionForumRow}>
             <Text style={styles.discussionForum}>Discussion Forum</Text>
             <EntypoIcon
@@ -28,7 +26,7 @@ function Untitled(props) {
               style={styles.icon}
             ></EntypoIcon>
           </View>
-        </View>
+
         <View style={styles.rect2}>
           <View style={styles.icon2Row}>
             <FontAwesomeIcon
@@ -75,10 +73,10 @@ const styles = StyleSheet.create({
     flex: 1
   },
   group: {
-    width: 355,
-    height: 668,
+    width: '100%',
+    height: '100%',
     marginTop: 53,
-    marginLeft: 11
+
   },
   image: {
     width: 66,
@@ -98,7 +96,7 @@ const styles = StyleSheet.create({
   },
   rect: {
     width: 353,
-    height: 55,
+
     borderWidth: 1,
     borderColor: "#000000",
     flexDirection: "row",
@@ -106,7 +104,6 @@ const styles = StyleSheet.create({
     marginLeft: 1
   },
   discussionForum: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 7
@@ -140,13 +137,15 @@ const styles = StyleSheet.create({
     width: 40,
     marginTop: 12
   },
+  youtube: {
+    alignSelf: 'stretch',
+    height: 300
+    },
   solvingRecursion: {
-    fontFamily: "roboto-700",
     color: "#121212",
     fontSize: 20
   },
   loremIpsum: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 18
   },
@@ -175,12 +174,10 @@ const styles = StyleSheet.create({
     marginTop: 12
   },
   whatIsDp: {
-    fontFamily: "roboto-700",
     color: "#121212",
     fontSize: 20
   },
   loremIpsum1: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 18,
     marginLeft: 1
@@ -218,5 +215,3 @@ const styles = StyleSheet.create({
     marginLeft: 1
   }
 });
-
-export default Untitled;

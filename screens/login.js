@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { firebase } from '../screens/config'
+import { firebase } from './config'
 export default function LoginScreen({navigation}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -26,7 +26,7 @@ export default function LoginScreen({navigation}) {
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate('HomeScreen', {user})
+                        navigation.navigate('Sakar', {user})
                     })
                     .catch(error => {
                         alert(error)
@@ -68,10 +68,11 @@ export default function LoginScreen({navigation}) {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onLoginPress()}>
-                    <Text style={styles.buttonTitle}>Log in</Text>
+                    <Text style={styles.buttonTitle}>Log In</Text>
                 </TouchableOpacity>
                 <View style={styles.footerView}>
-                    <Text style={styles.footerText}>Don't have an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign up</Text></Text>
+                    <Text style={styles.footerText}>Don't have an account? </Text>
+                    <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign Up</Text>
                 </View>
             </KeyboardAwareScrollView>
         </View>
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 30,
         marginRight: 30,
-        paddingLeft: 16
+        paddingLeft: 16,
+        paddingRight:16
     },
     button: {
         backgroundColor: '#8B008B',
@@ -116,12 +118,14 @@ const styles = StyleSheet.create({
     buttonTitle: {
         color: 'white',
         fontSize: 16,
+        alignSelf:'center',
         fontWeight: "bold"
     },
     footerView: {
         flex: 1,
         alignItems: "center",
-        marginTop: 20
+        marginTop: 20,
+        alignSelf:'center'
     },
     footerText: {
         fontSize: 16,

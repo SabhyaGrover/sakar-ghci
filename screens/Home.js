@@ -12,35 +12,51 @@ import {
     Dimensions,
     requireNativeComponent,
 } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons';
 import Category from '../components/Card';
 import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
-const { height, width } = Dimensions.get('window')
+console.ignoredYellowBox = ['Warning: Encountered '];
 const axios = require('axios')
+const interest = ['web development','app development','machine learning','iot','data science']
+const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
 
 
 
-class Explore extends Component {
 
-state={
-    vid : '',
-    search:'',
-    value:'',
+export default class Home extends Component {
+    
+state = {
+        vid : [],
+        search:'',
+        //isQuery:false,
+    };
 
-};
+searchVid = event => {
+    event.preventDefault();
+    //console.log(this.state.search);
+
+    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.search}&type=video&key=${API_KEY}`;
+    axios.get(fetch_vid)
+    .then( response => {
+        console.log(this.state.search);
+        this.setState({
+        vid : response.data.items
+    })
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+    };
 
 
-handleSearch = event => {
-    //const search_api = process.env.SEARCH_API_KEY
-    this.setState({
-        search:event.target.value,
-    });
-    //console.log(search);
-};
+async componentDidMount(){
+    if(this.state.search === '')
+    {
+        var randNum = Math.floor(Math.random()*interest.length)
+        var keyword = interest[randNum] ;
 
-   async componentDidMount(){
-       await axios.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=IN&key=')
+        //console.log(keyword)
+       await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${keyword}&type=video&key=${API_KEY}`)
        .then(response => {
             //console.log(response);
          //console.log(response.data.items)
@@ -51,9 +67,13 @@ handleSearch = event => {
         .catch(function(error){
             console.log(error)
         })
-    };
+
+    }
+};
+
+
     render() {
-        return (
+        return(
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1}}>
                     <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
@@ -74,29 +94,31 @@ handleSearch = event => {
                                 placeholder="Search"
                                 placeholderTextColor="grey"
                                 style={{ flex: 1}}
+                                onChangeText={search => this.setState({search})}
                                 value={this.state.search}
-                                onChange={this.handleSearch}
 
                             />
-                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} />
+                            <EvilIconsIcon name='arrow-right' size = {35} style={styles.icon} onPress={this.searchVid}/>
 
                         </View>
 
                     </View>
 
                                     <FlatList
+
                                         data={this.state.vid}
                                         renderItem={({ item }) =>{
-                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id}`}/>
+                                        return <Category title={`${item.snippet.title}`} videoId={`${item.id.videoId}`}/>
                                         }
                                     }
                                     />
                 </View>
             </SafeAreaView>
+
         );
-    }
+    };
 }
-export default Explore;
+
 
 const styles = StyleSheet.create({
     image: {

@@ -23,7 +23,8 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
+# Team-HobbyHacks
+# GHCI20 Codeathon
 
 
 <!-- PROJECT LOGO -->
@@ -46,7 +47,9 @@
   </p>
 </p>
 
+> A Distraction Free App for Learning Online, from any source available.
 
+### 🏠 [Homepage](https://github.com/SabhyaGrover/sakar-ghci)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -56,7 +59,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -149,18 +151,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
+## Author
 
+👤 **Sabhya Grover,Chanchal Bansal, Shalini Kumari**
 
+* Twitter: [@GroverSabhya](https://twitter.com/GroverSabhya)
+* Github: [@SabhyaGrover](https://github.com/SabhyaGrover)
+* LinkedIn: [@Sabhya Grover](https://linkedin.com/in/Sabhya Grover)
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+## Show your support
 
-[forks-shield]: https://img.shields.io/github/forks/SabhyaGrover/sakar-ghci.svg?style=flat-square
-[forks-url]: https://github.com/SabhyaGrover/sakar-ghci/network/members
-[stars-shield]: https://img.shields.io/github/stars/SabhyaGrover/sakar-ghci.svg?style=flat-square
-[stars-url]: https://github.com/SabhyaGrover/sakar-ghci/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SabhyaGrover/sakar-ghci.svg?style=flat-square
-[issues-url]: https://github.com/SabhyaGrover/sakar-ghci/issues
-[license-shield]: https://img.shields.io/github/license/SabhyaGrover/sakar-ghci.svg?style=flat-square
-[license-url]: https://github.com/SabhyaGrover/sakar-ghci/blob/master/LICENSE.txt
+Give a ⭐️ if this project helped you!
 
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

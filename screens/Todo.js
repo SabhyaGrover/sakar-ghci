@@ -39,7 +39,7 @@ export default function Todo(props) {
   }, []);
   return (
     <View style={styles.container}>
-       <Text style={styles.list}>List</Text>
+       <Text style={styles.list}>To Do List</Text>
        <View style={styles.entry} >
        <View style={styles.listRow}>
        <MaterialButtonWithShadow
@@ -96,7 +96,7 @@ async function sendPushNotification(expoPushToken) {
     body: 'And here is the body!',
     data: { data: 'goes here' },
   };
- 
+
   await fetch('https://exp.host/--/api/v2/push/send', {
     method: 'POST',
     headers: {
