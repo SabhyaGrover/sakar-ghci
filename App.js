@@ -4,10 +4,10 @@ import Todo from './screens/Todo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
-import demologin from './screens/demologin';
+import login from './screens/login';
 import Registration from './screens/Registration';
 import profile from './screens/profile';
-
+import player from './screens/player';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { createStackNavigator } from '@react-navigation/stack';
@@ -30,19 +30,19 @@ function HomeScreen(){
           )}} />
 
         <Tab.Screen name='ToDo' component={Todo} options={{
-          tabBarLabel: 'ToDo',
+          tabBarLabel: 'To Do',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
           <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
-          tabBarLabel: 'Board',
+          tabBarLabel: 'LeaderBoard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
            <Tab.Screen
          name = 'profile' component = {profile} options={{
-          tabBarLabel: 'profile',
+          tabBarLabel: 'Profile',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="user" style={styles.icon} color={tintColor} size={25} />
           )}} /> 
@@ -62,13 +62,10 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       
-        <Stack.Screen name = 'login' component = { demologin} />
-        <Stack.Screen name="Registration" component={Registration} />
+        <Stack.Screen name = 'login' component = { login} />
+        <Stack.Screen name= 'Registration' component={Registration} />
         <Stack.Screen name = 'Interest' component = { Interests } />
-        <Stack.Screen name = 'leaderboard' component = {leaderboard } />
-        <Stack.Screen name = 'profile' component = { profile} />
-
-
+        <Stack.Screen name = 'player' component = {player} />
         <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>

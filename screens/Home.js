@@ -18,7 +18,11 @@ import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 const axios = require('axios')
 const interest = ['web development','app development','machine learning','iot','data science']
 const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
-export default class Explore extends Component {
+
+
+
+
+export default class Home extends Component {
     
 state = {
         vid : [],

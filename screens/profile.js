@@ -4,66 +4,68 @@ import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialSearchBar5 from "../components/MaterialSearchBar5";
 
-function Untitled6(props) {
+function Profile(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.badgesRow}>
-        <Text style={styles.badges}>Badges</Text>
-        <View style={styles.rect}>
-          <EntypoIcon name="star" style={styles.icon3}></EntypoIcon>
-        </View>
-      </View>
-      <View style={styles.image1ColumnRow}>
-        <View style={styles.image1Column}>
-          <Image
-            source={require("../assets/images/GHCI1.png")}
-            resizeMode="contain"
-            style={styles.image1}
-          ></Image>
+
+        <View style={styles.imageColumn}>
           <FontAwesomeIcon
             name="user-circle"
             style={styles.icon}
           ></FontAwesomeIcon>
+
+          <Text style={styles.myProfile}>Profile</Text>
+      </View>
+
+      <View style={{alignSelf:'center',flexDirection:'row'}}>
+      <EntypoIcon name="star" style={styles.icon3}/>
+      <EntypoIcon name="star" style={styles.icon3}/>
+      </View>
+
+      <View style ={styles.imageColumn}>
+      <Text style={styles.username}>Username</Text>
+          <View style={styles.rect}>
+          <Text style={styles.Text}>Edit name</Text>
         </View>
-        <Text style={styles.myProfile}>My Profile</Text>
-      </View>
-      <View style={styles.usernameRow}>
-        <Text style={styles.username}>Username</Text>
-        <View style={styles.rect5}>
-          <Text style={styles.kristi}>Kristi</Text>
+        </View>
+
+        <View style={styles.imageColumn}>
+        <Text style={styles.username}>Email</Text>
+        <View style={styles.rect}>
+          <Text style={styles.Text}>Edit email</Text>
+        </View>
+        </View>
+
+        <View style ={styles.imageColumn}>
+      <Text style={styles.username}>Gender</Text>
+          <View style={styles.rect}>
+          <Text style={styles.Text}>Add Gender</Text>
+        </View>
+        </View>
+
+        <View style ={styles.imageColumn}>
+      <Text style={styles.username}>Age</Text>
+          <View style={styles.rect}>
+          <Text style={styles.Text}>Add age</Text>
+        </View>
+        </View>
+
+        <View style ={styles.imageColumn}>
+      <Text style={styles.username}>Region</Text>
+          <View style={styles.rect}>
+          <Text style={styles.Text}>Add Region</Text>
+        </View>
         </View>
       </View>
-      <View style={styles.emailRow}>
-        <Text style={styles.email}>Email</Text>
-        <MaterialSearchBar5
-          style={styles.materialSearchBar5}
-        ></MaterialSearchBar5>
-      </View>
-      <View style={styles.genderRow}>
-        <Text style={styles.gender}>Gender</Text>
-        <View style={styles.rect2}>
-          <Text style={styles.female}>Female</Text>
-        </View>
-      </View>
-      <View style={styles.age2Row}>
-        <Text style={styles.age2}>Age</Text>
-        <View style={styles.rect3}>
-          <Text style={styles.female1}>13</Text>
-        </View>
-      </View>
-      <View style={styles.regionRow}>
-        <Text style={styles.region}>Region</Text>
-        <View style={styles.rect4}>
-          <Text style={styles.india}>India</Text>
-        </View>
-      </View>
-    </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    alignItems:'center',
+    justifyContent:'center'
   },
   badges: {
     color: "#121212",
@@ -76,65 +78,66 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(155,155,155,1)",
     backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 55
+    alignSelf:'flex-end'
   },
   icon3: {
     color: "rgba(215,138,72,1)",
     fontSize: 32,
     height: 35,
-    width: 32,
-    marginLeft: 52
+    width: 35,
+
   },
   badgesRow: {
     height: 35,
     flexDirection: "row",
     marginTop: 241,
-    marginLeft: 31,
-    marginRight: 36
+
   },
   image1: {
     width: 146,
     height: 87
   },
   icon: {
-    color: "rgba(162,14,192,1)",
+    color: "rgba(105,105,105,1)",
     fontSize: 61,
-    marginLeft: 43
   },
-  image1Column: {
-    width: 146
+  imageColumn: {
+    width:'100%',
+    justifyContent:'space-evenly',
+    alignItems:'center',
+    alignSelf:'center',
+    flexDirection:'row',
+    marginTop:20
   },
   myProfile: {
     color: "#121212",
     fontSize: 25,
-    marginLeft: 23,
-    marginTop: 86
+
   },
-  image1ColumnRow: {
-    height: 148,
-    flexDirection: "row",
-    marginTop: -263,
-    marginLeft: -10,
-    marginRight: 90
+  imageColumnRow: {
+   flexDirection:'column',
+   justifyContent:'space-around',
+   alignContent:'space-between'
   },
   username: {
     color: "#121212",
-    fontSize: 23
+    fontSize: 18,
+    marginTop:10,
+    alignSelf:'flex-start'
   },
-  rect5: {
-    width: 161,
-    height: 36,
+  rect: {
+    width: '40%',
+    height: 35,
     borderWidth: 1,
-    borderColor: "rgba(155,155,155,1)",
-    backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 27
+    borderColor: "rgba(72,20,128,1)",
+    alignContent:'center'
   },
-  kristi: {
-    fontFamily: "roboto-regular",
-    color: "rgba(74,74,74,1)",
+  Text: {
+
+    color: "rgba(128,128,128,1)",
     lineHeight: 35,
     fontSize: 19,
-    marginLeft: 45
+    alignSelf:'center'
   },
   usernameRow: {
     height: 36,
@@ -149,10 +152,7 @@ const styles = StyleSheet.create({
     marginTop: 28
   },
   materialSearchBar5: {
-    height: 60,
-    width: 161,
-    backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 75
+    flexGrow:1
   },
   emailRow: {
     height: 60,
@@ -241,4 +241,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Untitled6;
+export default Profile;
