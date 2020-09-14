@@ -82,8 +82,8 @@ came to the fore-front. There are various resources available on the web but the
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
-
+### Prerequisites   
+[![NPM INSTALL](http://img.shields.io/badge/npm-install-blue.svg?style=flat&logo=npm)](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 
 * npm
 ```sh
 npm install npm@latest -g
