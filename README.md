@@ -67,7 +67,7 @@
 SAKAR is a platform where students can have distraction free learning. As we call it, it is "NETFLIX for LEARNERS". Due to COVID, when offline learning got hindered, E-learning
 came to the fore-front. There are various resources available on the web but there is no common platform that connects all the educational content without any diversions. SAKAR is the straight road to learning that every learner needs.
 <p align="center">
- <img src="assets/images/features.png" alt="features" width="743" height="584">
+ <img src="assets/images/features.png" alt="features" >
 </p>
 
 ### Built With
