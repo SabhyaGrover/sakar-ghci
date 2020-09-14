@@ -23,7 +23,8 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
+# Team-HobbyHacks
+# GHCI20 Codeathon
 
 
 <!-- PROJECT LOGO -->
@@ -56,7 +57,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 
