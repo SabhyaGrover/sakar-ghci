@@ -1,20 +1,18 @@
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 import { WebView } from 'react-native-webview';
-//import { useNavigation} from '@react-navigation/native';
-import MaterialSearchBar from "../components/MaterialSearchBar";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialUnderlineTextbox from "../components/MaterialUnderlineTextbox";
 import MaterialButtonTransparentHamburger from "../components/MaterialButtonTransparentHamburger";
-//const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
-//const navigation = useNavigation();
+
 export default function player({route}){
-const {videoId} = route.params.videoId
+const {videoId} = route.params.params
+//console.log(route.params.params)
   return (
     <View style={styles.container}>
       <View style={styles.group}>
-      <WebView source ={{ uri:`https://www.youtube.com/embed/s1jZtcStl5g`}}
+      <WebView source ={{ uri:`https://www.youtube.com/embed/${videoId}`}}
         startInLoadingState
         javaScriptEnabled
         style={{flex:1}} />

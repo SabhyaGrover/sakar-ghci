@@ -9,7 +9,7 @@ function Index(props) {
 
       <View style={styles.Heading}>
         <Image
-          source={require("../assets/images/GHCI1.png")}
+          source={require("../assets/images/sakar_logo.png")}
           resizeMode="contain"
           style={styles.image}
         ></Image>
@@ -202,22 +202,19 @@ function Index(props) {
 const styles = StyleSheet.create({
   container: {
    flex:1,
-   justifyContent:'center',
+   justifyContent:'space-evenly',
    alignItems:'center'
   },
   image: {
-    top: 0,
-    left: 0,
+    marginTop:20,
     width: 146,
     height: 87,
     position: "absolute"
   },
   leaderBoard: {
-    top: 68,
-    left: 4,
-    position: "absolute",
+    marginTop:90,
     color: "#121212",
-    fontSize: 30
+    fontSize: 25
   },
   Heading: {
     width: 173,

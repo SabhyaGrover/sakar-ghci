@@ -44,7 +44,7 @@ export default function LoginScreen({navigation}) {
                 keyboardShouldPersistTaps="always">
                 <Image
                     style={styles.logo}
-                    source={require('../assets/images/GHCI.png')}
+                    source={require('../assets/images/sakar_logo.png')}
                 />
                 <TextInput
                     style={styles.input}
@@ -91,7 +91,8 @@ const styles = StyleSheet.create({
         height: 120,
         width: '100%',
         alignSelf: "center",
-        margin: 70
+        margin: 70,
+        marginTop:240
     },
     input: {
         height: 48,
