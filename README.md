@@ -18,7 +18,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/SabhyaGrover/sakar-ghci)  [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/SabhyaGrover/sakar-ghci)
 # GHCI20 Codeathon
 ## Team-HobbyHacks
 
@@ -151,3 +151,6 @@ Distributed under the GPL License. See `LICENSE` for more information.
 
 Give a ⭐️ if this project helped you!
 
+[![Sabhya Grover](https://img.shields.io/badge/Author-@SabhyaGrover-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/SabhyaGrover)
+[![Chanchal Bansal](https://img.shields.io/badge/Author-@ChanchalBansal-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/Chanchal1603)
+[![Shalini Kumari](https://img.shields.io/badge/Author-@ShaliniKumari-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/shalinikumari50)
