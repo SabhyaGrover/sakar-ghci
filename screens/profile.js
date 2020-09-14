@@ -56,6 +56,8 @@ function Profile(props) {
           <Text style={styles.Text}>Add Region</Text>
         </View>
         </View>
+
+        <Text style={{justifyContent:'center',marginTop:300}}>Developed with ❤️ | Team HobbyHacks </Text>
       </View>
 
   );
@@ -66,11 +68,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems:'center',
     justifyContent:'center'
-  },
-  badges: {
-    color: "#121212",
-    fontSize: 23,
-    marginTop: 3
   },
   rect: {
     width: 161,
@@ -86,16 +83,6 @@ const styles = StyleSheet.create({
     height: 35,
     width: 35,
 
-  },
-  badgesRow: {
-    height: 35,
-    flexDirection: "row",
-    marginTop: 241,
-
-  },
-  image1: {
-    width: 146,
-    height: 87
   },
   icon: {
     color: "rgba(105,105,105,1)",
@@ -139,106 +126,7 @@ const styles = StyleSheet.create({
     fontSize: 19,
     alignSelf:'center'
   },
-  usernameRow: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 29,
-    marginLeft: 31,
-    marginRight: 36
-  },
-  email: {
-    color: "#121212",
-    fontSize: 23,
-    marginTop: 28
-  },
-  materialSearchBar5: {
-    flexGrow:1
-  },
-  emailRow: {
-    height: 60,
-    flexDirection: "row",
-    marginTop: 84,
-    marginLeft: 31,
-    marginRight: 36
-  },
-  gender: {
-    color: "#121212",
-    fontSize: 23
-  },
-  rect2: {
-    width: 161,
-    height: 36,
-    borderWidth: 1,
-    borderColor: "rgba(155,155,155,1)",
-    backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 58
-  },
-  female: {
-    color: "rgba(74,74,74,1)",
-    lineHeight: 35,
-    fontSize: 19,
-    marginTop: 1,
-    marginLeft: 37
-  },
-  genderRow: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 32,
-    marginLeft: 31,
-    marginRight: 36
-  },
-  age2: {
-    color: "#121212",
-    fontSize: 23
-  },
-  rect3: {
-    width: 161,
-    height: 36,
-    borderWidth: 1,
-    borderColor: "rgba(155,155,155,1)",
-    backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 95
-  },
-  female1: {
-    color: "rgba(74,74,74,1)",
-    lineHeight: 35,
-    fontSize: 22,
-    marginTop: 1,
-    marginLeft: 44
-  },
-  age2Row: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 30,
-    marginLeft: 31,
-    marginRight: 33
-  },
-  region: {
-    color: "#121212",
-    fontSize: 23
-  },
-  rect4: {
-    width: 161,
-    height: 36,
-    borderWidth: 1,
-    borderColor: "rgba(155,155,155,1)",
-    backgroundColor: "rgba(230,188,253,1)",
-    marginLeft: 64
-  },
-  india: {
-    color: "rgba(74,74,74,1)",
-    lineHeight: 35,
-    fontSize: 22,
-    marginTop: 1,
-    marginLeft: 34
-  },
-  regionRow: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 26,
-    marginLeft: 31,
-    marginRight: 33
-  }
+
 });
 
 export default Profile;

@@ -18,7 +18,7 @@ import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 const Stack = createStackNavigator()
 const Tab = createMaterialBottomTabNavigator()
 
-function HomeScreen(){
+function Sakar(){
   return(
 
     <Tab.Navigator barStyle = {{ backgroundColor : '#481480' }}>
@@ -35,8 +35,8 @@ function HomeScreen(){
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
-          <Tab.Screen name='LeaderBoard' component={leaderboard} options={{
-          tabBarLabel: 'LeaderBoard',
+          <Tab.Screen name='Leaderboard' component={leaderboard} options={{
+          tabBarLabel: 'Leaderboard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
           )}}/>
@@ -62,11 +62,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       
-        <Stack.Screen name = 'login' component = { login} />
+        <Stack.Screen name = 'Welcome to Sakar!' component = { login} />
         <Stack.Screen name= 'Registration' component={Registration} />
         <Stack.Screen name = 'Interest' component = { Interests } />
-        <Stack.Screen name = 'player' component = {player} />
-        <Stack.Screen name = 'HomeScreen' component = {HomeScreen} />
+        <Stack.Screen name = 'Playing Video ..' component = {player} />
+        <Stack.Screen name = 'Sakar' component = {Sakar} />
         </Stack.Navigator>
       </NavigationContainer>
 

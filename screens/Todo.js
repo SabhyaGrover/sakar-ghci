@@ -39,7 +39,7 @@ export default function Todo(props) {
   }, []);
   return (
     <View style={styles.container}>
-       <Text style={styles.list}>List</Text>
+       <Text style={styles.list}>To Do List</Text>
        <View style={styles.entry} >
        <View style={styles.listRow}>
        <MaterialButtonWithShadow

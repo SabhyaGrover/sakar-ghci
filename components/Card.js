@@ -9,7 +9,7 @@ export default function Category(props)  {
         return (
             <TouchableOpacity onPress={() => navigation.dispatch(
                 CommonActions.navigate({
-                    name: 'player',
+                    name: 'Playing Video ..',
                     params:{
                         videoId:props.videoId
                     },
