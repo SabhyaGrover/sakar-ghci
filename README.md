@@ -28,7 +28,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/SabhyaGrover/sakar-ghci" >
-    <img src="assets/icon.png" alt="Logo" width="250" height="250">
+    <img src="assets/6OEYgIQ - Imgur.png" alt="Logo" width="250" height="100">
   </a>
 
   <h1 align="center">सakar</h1>
