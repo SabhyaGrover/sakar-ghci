@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-import MaterialSearchBar5 from "../components/MaterialSearchBar5";
+import MaterialSlider1 from '../components/MaterialSlider1';
 
 function Profile(props) {
   return (
@@ -56,8 +56,36 @@ function Profile(props) {
           <Text style={styles.Text}>Add Region</Text>
         </View>
         </View>
+        <View style = {{flexDirection:'column',marginTop:50,alignContent:'center'}}>
+      <Text style={{fontSize:20,fontWeight:'bold'}}>Course Progress</Text>
 
-        <Text style={{justifyContent:'center',marginTop:300}}>Developed with ❤️ | Team HobbyHacks </Text>
+        <View style={{flexDirection:'row'}}>
+        <Text style={styles.username}>Video 1</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        </View>
+
+        <View style={{flexDirection:'row'}}>
+        <Text style={styles.username}>Video 2</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        </View>
+
+        <View style={{flexDirection:'row'}}>
+        <Text style={styles.username}>Video 3</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        </View>
+
+        <View style={{flexDirection:'row'}}>
+        <Text style={styles.username}>Video 4</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        </View>
+
+        <View style={{flexDirection:'row'}}>
+        <Text style={styles.username}>Video 5</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        </View>
+
+        </View>
+        <Text style={{justifyContent:'center',marginBottom:0,marginTop:70}}>Developed with ❤️ | Team HobbyHacks </Text>
       </View>
 
   );
@@ -66,6 +94,7 @@ function Profile(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop:50,
     alignItems:'center',
     justifyContent:'center'
   },

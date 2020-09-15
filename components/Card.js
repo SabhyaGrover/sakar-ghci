@@ -7,7 +7,7 @@ import player from '../screens/player';
 export default function Category(props)  {
     const navigation = useNavigation();
         return (
-            <TouchableOpacity onPress={() => navigation.navigate('player',{screen:'player',params:{videoId:props.videoId, description:props.description}})}>
+            <TouchableOpacity onPress={() => navigation.navigate('player',{screen:'player',params:{videoId:props.videoId, description:props.description,title:props.title}})}>
             <View style={styles.container}>
                 <View style={{ flex: 2 }}>
                     <Image source={{uri:`https://i.ytimg.com/vi/${props.videoId}/hqdefault.jpg`}}
