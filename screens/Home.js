@@ -48,6 +48,7 @@ searchVid = event => {
 
 
 async componentDidMount(){
+
     if(this.state.search === '')
     {
         var randNum = Math.floor(Math.random()*interest.length)
