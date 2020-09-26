@@ -57,16 +57,16 @@ export default function App() {
  
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
-  
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      
-        <Stack.Screen name = 'Welcome to Sakar!' component = { login} />
-        <Stack.Screen name= 'Registration' component={Registration} />
-        <Stack.Screen name = 'Interest' component = { Interests } />
-        <Stack.Screen name = 'Playing Video ..' component = {player} />
-        <Stack.Screen name = 'Sakar' component = {Sakar} />
+
+        <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
+        <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
+        <Stack.Screen name = 'Interest' component = { Interests }  options ={{headerShown:false}}/>
+        <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
+        <Stack.Screen name = 'Sakar' component = {Sakar}  options ={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
 

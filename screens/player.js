@@ -1,31 +1,54 @@
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 import { WebView } from 'react-native-webview';
-//import { useNavigation} from '@react-navigation/native';
-import MaterialSearchBar from "../components/MaterialSearchBar";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialUnderlineTextbox from "../components/MaterialUnderlineTextbox";
 import MaterialButtonTransparentHamburger from "../components/MaterialButtonTransparentHamburger";
-//const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
-//const navigation = useNavigation();
+
 export default function player({route}){
-const {videoId} = route.params.videoId
+const {videoId} = route.params.params
+const {description} = route.params.params
+const {title } = route.params.params
+console.log(route.params.params)
   return (
     <View style={styles.container}>
       <View style={styles.group}>
-      <WebView source ={{ uri:`https://www.youtube.com/embed/s1jZtcStl5g`}}
+      <WebView source ={{ uri:`https://www.youtube.com/embed/${videoId}`}}
         startInLoadingState
         javaScriptEnabled
         style={{flex:1}} />
+         <View style={{justifyContent:'center',marginTop:7}}>
+          <View style={{backgroundColor:'#481480'}}>
+
+            <View style={styles.column}>
+              <Text style={{color:'#DCDCDC',fontWeight:'bold',fontSize:25}}>{title}</Text>
+            </View>
+          </View>
+          <Text style={{color:'#121212',marginLeft:10,marginRight:10,marginTop:20,alignItems:'flex-end',fontSize:15}}>{description}</Text>
+        </View>
+
 
           <View style={styles.discussionForumRow}>
-            <Text style={styles.discussionForum}>Discussion Forum</Text>
-            <EntypoIcon
+          <Text style={styles.discussionForum}>Discussion Forum<EntypoIcon
               name="chevron-small-down"
               style={styles.icon}
-            ></EntypoIcon>
+            /></Text>
+
+          <View style={styles.rect2}>
+          <View style={styles.icon2Row}>
+          <FontAwesomeIcon
+              name="user-circle-o"
+              style={styles.icon2}
+            />
+            <View style={styles.column}>
+              <Text style={styles.comments}>Debugging Errors          </Text>
+              <Text style={styles.loremIpsum}>
+                -Object is undefined{"\n"}-Invalid Syntax
+              </Text>
+            </View>
           </View>
+        </View>
 
         <View style={styles.rect2}>
           <View style={styles.icon2Row}>
@@ -33,27 +56,14 @@ const {videoId} = route.params.videoId
               name="user-circle-o"
               style={styles.icon2}
             ></FontAwesomeIcon>
-            <View style={styles.solvingRecursionColumn}>
-              <Text style={styles.solvingRecursion}>Solving Recursion</Text>
+            <View style={styles.column}>
+              <Text style={styles.comments}>Concepts and Doubts</Text>
               <Text style={styles.loremIpsum}>
-                Lorem ipsum dolor sit amet dolor{"\n"}consectetuer
+                -Learning Resources{"\n"}-FAQ
               </Text>
             </View>
           </View>
         </View>
-        <View style={styles.rect4}>
-          <View style={styles.icon3Row}>
-            <FontAwesomeIcon
-              name="user-circle-o"
-              style={styles.icon3}
-            ></FontAwesomeIcon>
-            <View style={styles.whatIsDpColumn}>
-              <Text style={styles.whatIsDp}>What is dp?</Text>
-              <Text style={styles.loremIpsum1}>
-                Lorem ipsum dolor sit amet dolor{"\n"}consectetuer
-              </Text>
-            </View>
-          </View>
         </View>
         <View style={styles.materialUnderlineTextboxStack}>
           <MaterialUnderlineTextbox
@@ -76,6 +86,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     marginTop: 53,
+    justifyContent:'center'
 
   },
   image: {
@@ -95,40 +106,45 @@ const styles = StyleSheet.create({
     marginLeft: 1
   },
   rect: {
-    width: 353,
-
+    
     borderWidth: 1,
     borderColor: "#000000",
     flexDirection: "row",
-    marginTop: 283,
-    marginLeft: 1
+
   },
   discussionForum: {
     color: "#121212",
     fontSize: 24,
-    marginTop: 7
+    marginTop: 7,
+    marginBottom:7,
+
   },
   icon: {
     color: "rgba(128,128,128,1)",
-    fontSize: 40,
-    height: 44,
+    fontSize: 20,
+    height: 40,
     width: 40,
     marginLeft: 86
   },
   discussionForumRow: {
     height: 44,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 17,
-    marginLeft: 18,
+    flex:1,
+    flexDirection: "column",
+    justifyContent:'flex-start',
+    alignItems:'center',
+    alignContent:'center',
     marginTop: 6
   },
   rect2: {
     width: 353,
     height: 77,
+    flexDirection:'row',
+    justifyContent:'space-evenly',
+    alignItems:'center',
+    alignSelf:'center',
     borderWidth: 1,
     borderColor: "#000000",
-    marginTop: 21
+
   },
   icon2: {
     fontSize: 40,
@@ -141,23 +157,28 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     height: 300
     },
-  solvingRecursion: {
+  comments: {
     color: "#121212",
     fontSize: 20
   },
   loremIpsum: {
     color: "#121212",
-    fontSize: 18
+    fontSize: 15,
+    alignItems:'center',
+    marginTop:10,
+    marginLeft:10,
+    marginRight:10,
+    justifyContent:"center"
   },
-  solvingRecursionColumn: {
-    width: 266,
-    marginLeft: 27
+  column: {
+    justifyContent:"center",
+    alignItems:'stretch',
+    marginLeft:7
   },
   icon2Row: {
-    height: 68,
+    height: 48,
     flexDirection: "row",
-    marginLeft: 14,
-    marginRight: 6
+
   },
   rect4: {
     width: 353,

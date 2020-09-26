@@ -18,10 +18,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/SabhyaGrover/sakar-ghci)  [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/SabhyaGrover/sakar-ghci)
 # GHCI20 Codeathon
 ## Team-HobbyHacks
 
@@ -31,7 +28,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/SabhyaGrover/sakar-ghci" >
-    <img src="assets/icon.png" alt="Logo" width="250" height="250">
+    <img src="assets/6OEYgIQ - Imgur.png" alt="Logo" width="250" height="100">
   </a>
 
   <h1 align="center">सakar</h1>
@@ -67,27 +64,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 SAKAR is a platform where students can have distraction free learning. As we call it, it is "NETFLIX for LEARNERS". Due to COVID, when offline learning got hindered, E-learning
 came to the fore-front. There are various resources available on the web but there is no common platform that connects all the educational content without any diversions. SAKAR is the straight road to learning that every learner needs.
-
+<p align="center">
+ <img src="assets/images/features.png" alt="features" >
+</p>
 
 ### Built With
 
-* [React-Native](https://reactnative.dev/)
-* [Firebase](https://firebase.google.com/)
-* [Expo](https://expo.io/)
-
-
+- **Frontend**: [React-Native](https://reactnative.dev/) and [Expo](https://expo.io/)
+- **Backend**: [Firebase](https://firebase.google.com/)
+- **IDE**: VS Code
+- **Design**: Figma, Whimsical
+- **Version Control**: Git and GitHub
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
+### Prerequisites   
+[![NPM INSTALL](http://img.shields.io/badge/npm-install-blue.svg?style=flat&logo=npm)](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 
 * npm
 ```sh
 npm install npm@latest -g
@@ -122,7 +118,14 @@ npm start
 
 6. Scan the QR Code to run the App on your phone.
 
+## Team:
 
+
+| S.No. | Team Member Name | LinkedIn | GitHub Username |
+| --------------- | --------------- | --------------- | --------------- |
+| 1. | Sabhya Grover | [@SabhyaGrover](https://www.linkedin.com/in/sabhyagrover/) | [@SabhyaGrover](https://github.com/SabhyaGrover) |
+| 2. | Chanchal Bansal | [@ChanchalBansal](https://www.linkedin.com/in/chanchal-bansal-4b6778193/)| [@Chanchal1603](https://github.com/Chanchal1603)  |
+| 3. | Shalini Kumari | [@ShaliniKumari](https://www.linkedin.com/in/shalinikumari50/) | [@shalinikumari50](https://github.com/shalinikumari50)  |
 
 
 
@@ -142,23 +145,12 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-
-
-
-
-## Author
-
-👤 **Sabhya Grover,Chanchal Bansal, Shalini Kumari**
-
-* Twitter: [@GroverSabhya](https://twitter.com/GroverSabhya)
-* Github: [@SabhyaGrover](https://github.com/SabhyaGrover)
-* LinkedIn: [@Sabhya Grover](https://linkedin.com/in/Sabhya Grover)
+Distributed under the GPL License. See `LICENSE` for more information.
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
+[![Sabhya Grover](https://img.shields.io/badge/Author-@SabhyaGrover-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/SabhyaGrover)
+[![Chanchal Bansal](https://img.shields.io/badge/Author-@ChanchalBansal-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/Chanchal1603)
+[![Shalini Kumari](https://img.shields.io/badge/Author-@ShaliniKumari-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/shalinikumari50)
