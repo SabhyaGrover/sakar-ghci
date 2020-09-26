@@ -18,13 +18,11 @@ import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 const axios = require('axios')
 const interest = ['web development','app development','machine learning','iot','data science']
-const API_KEY = ``;
+const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
 YellowBox.ignoreWarnings(['Encountered two children','Failed child context']);
 
-
-
 export default class Home extends Component {
-    
+
 state = {
         vid : [],
         search:'',
@@ -35,7 +33,7 @@ searchVid = event => {
     event.preventDefault();
     //console.log(this.state.search);
 
-    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${this.state.search}&type=video&key=${API_KEY}&channelType=show`;
+    const fetch_vid = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${this.state.search}&type=video&key=${API_KEY}`;
     axios.get(fetch_vid)
     .then( response => {
         console.log(this.state.search);
@@ -54,7 +52,7 @@ async componentDidMount(){
     {
         var randNum = Math.floor(Math.random()*interest.length)
         var keyword = interest[randNum] ;
-
+       // console.log(user);
         //console.log(keyword)
        await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${keyword}&type=video&key=${API_KEY}`)
        .then(response => {
@@ -74,8 +72,8 @@ async componentDidMount(){
 
 
     render() {
-        //const {user } = this.props.navigation;
-        //console.log({user});
+        const { user } = this.props.navigation;
+        console.log({user})
         return(
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1}}>

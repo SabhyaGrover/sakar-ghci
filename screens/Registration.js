@@ -98,7 +98,7 @@ export default function RegistrationScreen({navigation}) {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onRegisterPress()}>
-                    <Text style={styles.buttonTitle}>Create account</Text>
+                    <Text style={styles.buttonTitle}>Continue -> </Text>
                 </TouchableOpacity>
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Already got an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Log in</Text></Text>
@@ -111,7 +111,8 @@ export default function RegistrationScreen({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop:50
     },
     title: {
 
@@ -147,7 +148,9 @@ const styles = StyleSheet.create({
     buttonTitle: {
         color: 'white',
         fontSize: 16,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        alignSelf:'stretch',
+        textAlign:'center'
     },
     footerView: {
         flex: 1,
@@ -156,11 +159,15 @@ const styles = StyleSheet.create({
     },
     footerText: {
         fontSize: 16,
-        color: '#2e2e2d'
+        color: '#2e2e2d',
+        alignSelf:'stretch',
+        textAlign:'center'
     },
     footerLink: {
         color: "#8B008B",
         fontWeight: "bold",
-        fontSize: 16
+        fontSize: 16,
+        alignSelf:'stretch',
+        textAlign:'center'
     }
 })

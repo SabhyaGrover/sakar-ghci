@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "287500585179-40s075dqqve93qg13qeqhjpfluof3op3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hobbyhacks.sakar",
+            "certificate_hash": "cf3d654be1bd6b8dfa6027e72cb3e82447f0bb96"
+          }
+        },
+        {
           "client_id": "287500585179-ms4uk983p3sg1a8if0pseunvaf2a29s6.apps.googleusercontent.com",
           "client_type": 3
         }
