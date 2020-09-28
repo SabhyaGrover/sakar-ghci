@@ -5,6 +5,27 @@
   "imageSize": 100,
   "commit": false,
   "contributors": [
+     {
+      "login": "SabhyaGrover",
+      "name": "Sabhya Grover",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/43875565?v=4",
+      "profile": "https://github.com/SabhyaGrover",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "Chanchal1603",
+      "name": "Chanchal Bansal",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/58745337?v=4",
+      "profile": "https://www.linkedin.com/in/chanchal-bansal-4b6778193/",
+      "contributions": [
+        "infra",
+        "code"
+      ]
+    },
     {
       "login": "shalinikumari50",
       "name": "Shalini Kumari",
@@ -15,17 +36,7 @@
         "design"
       ]
     },
-    {
-      "login": "SabhyaGrover",
-      "name": "Sabhya Grover",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/43875565?v=4",
-      "profile": "https://github.com/SabhyaGrover",
-      "contributions": [
-        "infra",
-        "test",
-        "code"
-      ]
-    }
+
   ],
   "contributorsPerLine": 7,
   "projectName": "sakar-ghci",
