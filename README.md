@@ -1,6 +1,6 @@
 <!--
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 *** Thanks for checking out this README Template. If you have a suggestion that would
 *** make this better, please fork the repo and create a pull request or simply open
@@ -168,6 +168,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width="100px;" alt=""/><br /><sub><b>Shalini Kumari</b></sub></a><br /><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=shalinikumari50" title="Code">💻</a> <a href="#design-shalinikumari50" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/SabhyaGrover"><img src="https://avatars1.githubusercontent.com/u/43875565?v=4" width="100px;" alt=""/><br /><sub><b>Sabhya Grover</b></sub></a><br /><a href="#infra-SabhyaGrover" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=SabhyaGrover" title="Tests">⚠️</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=SabhyaGrover" title="Code">💻</a></td>
   </tr>
 </table>
 
