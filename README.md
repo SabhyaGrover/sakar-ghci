@@ -37,7 +37,7 @@
     <br />
     <a href="https://github.com/SabhyaGrover/sakar-ghci">View Demo</a>
     .
-    <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Report Bug</a>
+    <a href="https://www.canva.com/design/DAEEf8oucD0/i_lWhFL7RlochasNVcZ9aQ/view?utm_content=DAEEf8oucD0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Presentation</a>
     ·
     <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Request Feature</a>
   </p>
