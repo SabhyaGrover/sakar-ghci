@@ -1,4 +1,7 @@
 <!--
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 *** Thanks for checking out this README Template. If you have a suggestion that would
 *** make this better, please fork the repo and create a pull request or simply open
 *** an issue with the tag "enhancement".
@@ -154,3 +157,22 @@ Give a ⭐️ if this project helped you!
 [![Sabhya Grover](https://img.shields.io/badge/Author-@SabhyaGrover-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/SabhyaGrover)
 [![Chanchal Bansal](https://img.shields.io/badge/Author-@ChanchalBansal-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/Chanchal1603)
 [![Shalini Kumari](https://img.shields.io/badge/Author-@ShaliniKumari-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/shalinikumari50)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width="100px;" alt=""/><br /><sub><b>Shalini Kumari</b></sub></a><br /><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=shalinikumari50" title="Code">💻</a> <a href="#design-shalinikumari50" title="Design">🎨</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
