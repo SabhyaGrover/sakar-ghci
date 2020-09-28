@@ -1,12 +1,8 @@
 <!--
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/SabhyaGrover/sakar-ghci)  [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/SabhyaGrover/sakar-ghci)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
+
 
 
 
@@ -21,7 +17,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/SabhyaGrover/sakar-ghci)  [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/SabhyaGrover/sakar-ghci)
+
 # GHCI20 Codeathon
 ## Team-HobbyHacks
 
@@ -154,9 +150,7 @@ Distributed under the GPL License. See `LICENSE` for more information.
 
 Give a ⭐️ if this project helped you!
 
-[![Sabhya Grover](https://img.shields.io/badge/Author-@SabhyaGrover-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/SabhyaGrover)
-[![Chanchal Bansal](https://img.shields.io/badge/Author-@ChanchalBansal-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/Chanchal1603)
-[![Shalini Kumari](https://img.shields.io/badge/Author-@ShaliniKumari-teal.svg?colorA=grey&colorB=blue&logo=github)](https://github.com/shalinikumari50)
+
 
 ## Contributors ✨
 
