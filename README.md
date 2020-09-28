@@ -169,8 +169,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
+
+|<a href="https://github.com/SabhyaGrover"><img src="https://avatars1.githubusercontent.com/u/43875565?v=4" width=150px height=150px /></a>|
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|**[Sabhya Grover](https://github.com/SabhyaGrover)**|
+| <a href="https://twitter.com/"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
+|<a href="https://github.com/Chanchal1603"><img src="https://avatars3.githubusercontent.com/u/58745337?v=4" width=150px height=150px /></a>|| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|**[Chanchal Bansal](https://github.com/Chanchal1603)**|
+| <a href="https://twitter.com/"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
+|<a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width=150px height=150px /></a>|| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|**[Shalini Kumari](https://github.com/shalinikumari50)**|
+| <a href="https://twitter.com/shalinikumari50"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/shalinikumari50"><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a>|
+
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
