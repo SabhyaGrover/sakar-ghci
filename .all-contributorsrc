@@ -14,6 +14,16 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "Chanchal1603",
+      "name": "Chanchal Bansal",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/58745337?v=4",
+      "profile": "https://www.linkedin.com/in/chanchal-bansal-4b6778193/",
+      "contributions": [
+        "infra",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
