@@ -74,7 +74,7 @@ async componentDidMount(){
 
     render() {
         const { user } = this.props.navigation;
-        console.log({user})
+        //console.log({user})
         return(
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1}}>
