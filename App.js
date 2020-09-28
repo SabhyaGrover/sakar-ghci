@@ -92,7 +92,7 @@ export default function App() {
         ):
         (
           <>
-           <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
+
           <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
           <Stack.Screen name = 'Interest' component = { Interests }  options ={{headerShown:false}}/>
           </>
@@ -100,6 +100,7 @@ export default function App() {
         )
 
         }
+      <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
       <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
 
         </Stack.Navigator>

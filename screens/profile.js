@@ -94,7 +94,7 @@ function Profile(props) {
                       firebase.auth().signOut()
                       .then(
                         () => {
-                        navigation.navigate('login')
+                        navigation.navigate('Welcome to Sakar!')
                         }
                         )
                       .catch( (error) => {alert(error)}  )

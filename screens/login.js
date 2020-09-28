@@ -94,7 +94,7 @@ export default function LoginScreen({navigation}) {
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Don't have an account? </Text>
                     <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign Up</Text>
-                    <Text onPress={onGooglePress} style={styles.footerLink}>Sign Up using Google</Text>
+                    
                 </View>
             </KeyboardAwareScrollView>
         </View>
