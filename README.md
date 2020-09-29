@@ -35,7 +35,7 @@
   <p align="center">
   <b>#MakeYourDreamSakar</b>
     <br />
-    <a href="https://github.com/SabhyaGrover/sakar-ghci">View Demo</a>
+    <a href="https://expo.io/@hobbyhacks/sakar">View Demo</a>
     .
     <a href="https://www.canva.com/design/DAEEf8oucD0/i_lWhFL7RlochasNVcZ9aQ/view?utm_content=DAEEf8oucD0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Presentation</a>
     ·
@@ -162,9 +162,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/SabhyaGrover"><img src="https://avatars1.githubusercontent.com/u/43875565?v=4" width="100px;" alt=""/><br /><sub><b>Sabhya Grover</b></sub></a><br /><a href="#infra-SabhyaGrover" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=SabhyaGrover" title="Tests">⚠️</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=SabhyaGrover" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/chanchal-bansal-4b6778193/"><img src="https://avatars3.githubusercontent.com/u/58745337?v=4" width="100px;" alt=""/><br /><sub><b>Chanchal Bansal</b></sub></a><br /><a href="#infra-Chanchal1603" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=Chanchal1603" title="Code">💻</a></td>02
-    vxcnivadadhvhvvhhvbhvh jh
-    <td align="center"><a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width="100px;" alt=""/><br /><sub><b>Shalini Kumari</b></sub></a><br /><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=shalinikumari50" title="Code">💻</a> <a href="#design-shalinikumari50" title="Design">🎨</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/chanchal-bansal-4b6778193/"><img src="https://avatars3.githubusercontent.com/u/58745337?v=4" width="100px;" alt=""/><br /><sub><b>Chanchal Bansal</b></sub></a><br /><a href="#infra-Chanchal1603" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=Chanchal1603" title="Code">💻</a></td>
+   <td align="center"><a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width="100px;" alt=""/><br /><sub><b>Shalini Kumari</b></sub></a><br /><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=shalinikumari50" title="Code">💻</a> <a href="#design-shalinikumari50" title="Design">🎨</a></td>
 
   </tr>
 </table>
@@ -175,13 +174,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 |<a href="https://github.com/SabhyaGrover"><img src="https://avatars1.githubusercontent.com/u/43875565?v=4" width=150px height=150px /></a>|
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |**[Sabhya Grover](https://github.com/SabhyaGrover)**|
-| <a href="https://twitter.com/"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
+| <a href="https://twitter.com/GroverSabhya"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/sabhyagrover/"><img src="assets/linkedin.png" width="32px" height="32px"></a> <a href="#infra-SabhyaGrover" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> |
 |<a href="https://github.com/Chanchal1603"><img src="https://avatars3.githubusercontent.com/u/58745337?v=4" width=150px height=150px /></a>|| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |**[Chanchal Bansal](https://github.com/Chanchal1603)**|
-| <a href="https://twitter.com/"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a> |
+| <a href="https://twitter.com/Chancha40039094"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/chanchal-bansal-4b6778193/"><img src="assets/linkedin.png" width="32px" height="32px"></a><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=Chanchal1603" title="Code">💻</a> |
 |<a href="https://github.com/shalinikumari50"><img src="https://avatars0.githubusercontent.com/u/48484815?v=4" width=150px height=150px /></a>|| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |**[Shalini Kumari](https://github.com/shalinikumari50)**|
-| <a href="https://twitter.com/shalinikumari50"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/shalinikumari50"><img src="" width="32px" height="32px"></a> <a href=""><img src="" width="32px" height="32px"></a>|
+| <a href="https://twitter.com/shalinikumari50"><img src="assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/shalinikumari50"><img src="assets/linkedin.png" width="32px" height="32px"></a><a href="https://github.com/SabhyaGrover/sakar-ghci/commits?author=shalinikumari50" title="Code">💻</a>|
 
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
