@@ -36,7 +36,7 @@
   <b>#MakeYourDreamSakar</b>
     <br />
     <a href="https://expo.io/@hobbyhacks/sakar">View Demo</a>
-    .
+    ·
     <a href="https://www.canva.com/design/DAEEf8oucD0/i_lWhFL7RlochasNVcZ9aQ/view?utm_content=DAEEf8oucD0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Presentation</a>
     ·
     <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Request Feature</a>
@@ -154,7 +154,7 @@ Give a ⭐️ if this project helped you!
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
