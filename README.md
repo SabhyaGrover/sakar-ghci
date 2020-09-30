@@ -57,7 +57,16 @@
 * [License](#license)
 
 
+## Problem Statement
+Amid of COVID-19 pandemic, due to Lockdown and various Social Distancing Guidlines India’s Educational System comes to a standstill while taking it as an opportunity E-Learning comes to the Place.
 
+Students are facing the following problems curently:
+
+<b>Distraction</b>: Learning from home is an amazing experience. You might expect things around you to be like a school campus but they doesn’t. For online learning students didn’t have any Platform where they only get all the courses and Learning resources without any distractive Content that  doesn’t related to any Constructive Learning and motivation to learn these courses.
+
+<b>Adaptability</b>: Difficulty to adapt to an online learning environment immediately after traditional classroom learning.
+
+<b>Self Motivation</b>: Students start losing hope once they find difficulty in online learning. It requires motivation to complete tasks and engage students with their learning
 
 
 <!-- ABOUT THE PROJECT -->
