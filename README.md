@@ -18,7 +18,7 @@
 -->
 
 
-# GHCI20 Codeathon
+# GHCI Codeathon'20
 ## Team-HobbyHacks
 
 
