@@ -25,6 +25,7 @@
     "bundle-js": "^1.0.3",
     "evil-icons": "^1.10.1",
     "expo": "~38.0.8",
+    "expo-google-sign-in": "~8.2.1",
     "expo-notifications": "~0.3.3",
     "expo-permissions": "~9.0.1",
     "expo-status-bar": "^1.0.2",
@@ -51,8 +52,7 @@
     "react-redux": "^7.2.1",
     "readme-md-generator": "^1.0.0",
     "redux": "^4.0.5",
-    "uuid": "^8.3.0",
-    "expo-google-sign-in": "~8.2.1"
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
