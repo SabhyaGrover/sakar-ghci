@@ -1,10 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialSlider1 from '../components/MaterialSlider1';
+import {firebase} from './config';
+
 
 function Profile(props) {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
 
@@ -85,6 +89,18 @@ function Profile(props) {
         </View>
 
         </View>
+        <TouchableOpacity
+                    onPress={() => {
+                      firebase.auth().signOut()
+                      .then(
+                        () => {
+                        navigation.navigate('Welcome to Sakar!')
+                        }
+                        )
+                      .catch( (error) => {alert(error)}  )
+                    }}>
+                    <Text style={styles.buttonTitle}>Log Out</Text>
+                </TouchableOpacity>
         <Text style={{justifyContent:'center',marginBottom:0,marginTop:70}}>Developed with ❤️ | Team HobbyHacks </Text>
       </View>
 
