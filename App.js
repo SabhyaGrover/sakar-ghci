@@ -35,7 +35,7 @@ function Sakar(){
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
-          <Tab.Screen name='Leaderboard' component={leaderboard} options={{
+          <Tab.Screen name='Leaderboard' component={ leaderboard } options={{
           tabBarLabel: 'Leaderboard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
@@ -70,7 +70,7 @@ export default function App() {
             const userData = document.data()
             setLoading(false)
             setUser(userData)
-           // console.log(userData);
+           //console.log(userData);
           })
           .catch((error) => {
             setLoading(false)
@@ -84,30 +84,27 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        { user ?
-        (
-
+        { user?        (
+          <>
           <Stack.Screen name = 'Sakar' component = {Sakar}  options ={{headerShown:false}}/>
-
+          </>
         ):
         (
           <>
-
-          <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
-          <Stack.Screen name = 'Interest' component = { Interests }  options ={{headerShown:false}}/>
+           <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
           </>
+        )}
 
-        )
-
-        }
       <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
       <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
-
+      <Stack.Screen name = 'Interest' component = { Interests }  options ={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
 
   );
 }
+
+
 const styles = StyleSheet.create({
   icon: {
     color: "white",

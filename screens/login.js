@@ -40,7 +40,7 @@ export default function LoginScreen({navigation}) {
                         }
                         const user = firestoreDocument.data()
 
-                        navigation.navigate('Welcome to Sakar!',{screen:'Welcome to Sakar!',params:{user:{user}}})
+                        navigation.navigate('Sakar',{screen:'Sakar',params:{user:{user}}})
                     })
                     .catch(error => {
                         alert(error)
@@ -104,7 +104,7 @@ export default function LoginScreen({navigation}) {
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Don't have an account? </Text>
                     <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign Up</Text>
-                    
+
                 </View>
             </KeyboardAwareScrollView>
         </View>

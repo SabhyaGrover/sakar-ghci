@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, useNavigation } from "react-native";
 
 function MaterialButtonGrey(props) {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
+    <TouchableOpacity style={[styles.container, props.style]} onPress={() => {
+      navigation.navigate('Interests')
+    }}>
 
       <Text style={styles.next}>Next  &gt;&gt;</Text>
     </TouchableOpacity>
