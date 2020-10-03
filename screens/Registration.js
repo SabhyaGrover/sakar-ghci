@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import { Image, Text, TextInput,StyleSheet, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react';
+import { Image, Text, TextInput,StyleSheet, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { firebase } from '../screens/config'
+import { firebase } from '../screens/config';
+import { useNavigation} from '@react-navigation/native';
 
-
-
-export default function RegistrationScreen({navigation}) {
+export default function Registration() {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-
+    const navigation = useNavigation();
     const onFooterLinkPress = () => {
         navigation.navigate('Welcome to Sakar!')
     }
@@ -35,7 +34,8 @@ export default function RegistrationScreen({navigation}) {
             .doc(uid)
             .set(data)
             .then(() => {
-                navigation.navigate('Sakar', {user: data})
+                navigation.navigate('Interest', {screen:'Interest',params:{userData:data}})
+                //console.log(data);
             })
             .catch((error) => {
                 alert(error)

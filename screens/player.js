@@ -8,8 +8,8 @@ import MaterialButtonTransparentHamburger from "../components/MaterialButtonTran
 
 export default function player({route}){
 const {videoId} = route.params.params
-//const {description} = route.params.params
-//const {title } = route.params.params
+const {description} = route.params.params
+const {title } = route.params.params
 //console.log(route.params.params)
   return (
     <View style={styles.container}>
