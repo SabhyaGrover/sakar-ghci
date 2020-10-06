@@ -1,6 +1,6 @@
 import React, { useEffect, useState ,Component} from 'react';
 import {StyleSheet} from 'react-native';
-import Todo from './screens/Todo';
+import Todo from './screens/todoo';
 import Interests from './screens/Interests';
 import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
@@ -29,7 +29,7 @@ function Sakar(){
                 <EvilIconsIcon name="tag" style={styles.icon} color={tintColor} size={25} />
           )}} />
 
-        <Tab.Screen name='ToDo' component={Todo} options={{
+        <Tab.Screen name='todoo' component={Todo} options={{
           tabBarLabel: 'To Do',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
