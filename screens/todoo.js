@@ -1,0 +1,124 @@
+import {db} from '../screens/config';
+import React, {Component} from 'react';
+import {
+  StyleSheet,
+  Alert,
+  View,
+  Text,
+  Button,
+  ScrollView,
+  TextInput,
+} from 'react-native';
+import { firebase } from './config';
+
+export default class todoo extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        todos: {},
+        presentToDo: '',
+      };
+    }
+    componentDidMount() {
+      
+      firebase.database()
+      .ref('/todo').on('value', querySnapShot => {
+            let data = querySnapShot.val() ? querySnapShot.val() : {};
+            let todoItems = {...data};
+            this.setState({
+              todos: todoItems,
+            });
+          });
+    }
+    addNewTodo() {
+        db.ref('/interests').push({
+            done: false,
+            todoItem: this.state.presentToDo,
+          });
+          Alert.alert('Action!', 'A new To-do item was created');
+          this.setState({
+            presentToDo: '',
+          });
+    }
+    clearTodos() {
+        db.ref('/interests').remove();
+  
+    }
+    render() {
+        let todosKeys = Object.keys(this.state.todos);
+      return (
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainerStyle}>
+          <View>
+  {todosKeys.length > 0 ? (
+    todosKeys.map(key => (
+      <ToDoItem
+        key={key}
+        id={key}
+        todoItem={this.state.todos[key]}
+      />
+    ))
+  ) : (
+        <Text>No todo item</Text>
+  )}
+</View>
+          <TextInput
+            placeholder="Add new Todo"
+            value={this.state.presentToDo}
+            style={styles.textInput}
+            onChangeText={e => {
+              this.setState({
+                presentToDo: e,
+              });
+            }}
+            onSubmitEditing = {this.addNewTodo}
+          />
+          <Button
+            title="Add new To do item"
+            onPress={this.addNewTodo}
+            color="lightgreen"
+          />
+          <View style={{marginTop: 20}}>
+            <Button title="Clear todos" onPress={this.clearTodos} color="red" />
+          </View>
+        </ScrollView>
+      );
+    }
+  }
+  
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: 'white',
+    },
+    contentContainerStyle: {
+      alignItems: 'center',
+    },
+    textInput: {
+      borderWidth: 1,
+      borderColor: '#afafaf',
+      width: '80%',
+      borderRadius: 5,
+      paddingHorizontal: 10,
+      marginVertical: 20,
+      fontSize: 20,
+    },
+    todoItem: {
+      flexDirection: 'row',
+      marginVertical: 10,
+      alignItems: 'center',
+    },
+    todoText: {
+      borderColor: '#afafaf',
+      paddingHorizontal: 5,
+      paddingVertical: 7,
+      borderWidth: 1,
+      borderRadius: 5,
+      marginRight: 10,
+      minWidth: '50%',
+      textAlign: 'center',
+    },
+  });
+  
+ 
