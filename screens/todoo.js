@@ -36,11 +36,13 @@ export default class todoo extends React.Component {
         .ref('/todos').push({
             done: false,
             todoItems: this.state.presentToDo,
+
           });
           Alert.alert('Action!', 'A new To-do item was created');
           this.setState({
             presentToDo: '',
           });
+          console.log(todoItems)
     }
     clearTodos() {
         firebase.database()
@@ -71,11 +73,9 @@ export default class todoo extends React.Component {
             placeholder="Add new Todo"
             value={this.state.presentToDo}
             style={styles.textInput}
-            onChangeText={e => {
-              this.setState({
-                presentToDo: e,
-              });
-            }}
+            onChangeText={presentToDo => {
+              this.setState({presentToDo })
+            console.log({presentToDo})}}
             onSubmitEditing = {this.addNewTodo}
           />
           <Button
