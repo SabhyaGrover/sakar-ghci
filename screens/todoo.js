@@ -13,14 +13,13 @@ import {
 import { firebase } from './config';
 
 export default class todoo extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        todos: {},
+
+      state = {
+        todos: [],
         presentToDo: '',
       };
-    }
-    componentDidMount() {
+
+    async componentDidMount() {
       
       firebase.database()
       .ref('/todos').on('value', querySnapShot => {
@@ -30,24 +29,27 @@ export default class todoo extends React.Component {
               todos: todoItems,
             });
           });
+
+      //console.log(this.state.todos);
     }
-    addNewTodo() {
+
+    addNewTodo = () => {
         firebase.database()
         .ref('/todos').push({
             done: false,
             todoItems: this.state.presentToDo,
-
           });
           Alert.alert('Action!', 'A new To-do item was created');
           this.setState({
             presentToDo: '',
           });
-          console.log(todoItems)
+          //console.log(this.state.presentToDo)
     }
-    clearTodos() {
+
+    clearTodos=() => {
         firebase.database()
         .ref('/todos').remove();
-  
+
     }
     render() {
         let todosKeys = Object.keys(this.state.todos);
@@ -71,13 +73,13 @@ export default class todoo extends React.Component {
 </View>
           <TextInput
             placeholder="Add new Todo"
-            value={this.state.presentToDo}
             style={styles.textInput}
             onChangeText={presentToDo => {
               this.setState({presentToDo })
-            console.log({presentToDo})}}
-            onSubmitEditing = {this.addNewTodo}
+            }}
+            value={this.state.presentToDo}
           />
+
           <Button
             title="Add new To do item"
             onPress={this.addNewTodo}
@@ -95,6 +97,7 @@ export default class todoo extends React.Component {
     container: {
       flex: 1,
       backgroundColor: 'white',
+      marginTop:100
     },
     contentContainerStyle: {
       alignItems: 'center',
