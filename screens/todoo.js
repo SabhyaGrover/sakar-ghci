@@ -1,4 +1,5 @@
-import {db} from '../screens/config';
+import ToDoItem from './ToDoItem';
+
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -22,7 +23,7 @@ export default class todoo extends React.Component {
     componentDidMount() {
       
       firebase.database()
-      .ref('/todo').on('value', querySnapShot => {
+      .ref('/todos').on('value', querySnapShot => {
             let data = querySnapShot.val() ? querySnapShot.val() : {};
             let todoItems = {...data};
             this.setState({
@@ -31,9 +32,10 @@ export default class todoo extends React.Component {
           });
     }
     addNewTodo() {
-        db.ref('/interests').push({
+        firebase.database()
+        .ref('/todos').push({
             done: false,
-            todoItem: this.state.presentToDo,
+            todoItems: this.state.presentToDo,
           });
           Alert.alert('Action!', 'A new To-do item was created');
           this.setState({
@@ -41,7 +43,8 @@ export default class todoo extends React.Component {
           });
     }
     clearTodos() {
-        db.ref('/interests').remove();
+        firebase.database()
+        .ref('/todos').remove();
   
     }
     render() {
@@ -50,6 +53,7 @@ export default class todoo extends React.Component {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainerStyle}>
+          
           <View>
   {todosKeys.length > 0 ? (
     todosKeys.map(key => (

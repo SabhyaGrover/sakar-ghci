@@ -1,3 +1,4 @@
+
 import {
   StyleSheet,
   Alert,
@@ -9,20 +10,30 @@ import {
 } from 'react-native';
 import CheckBox from 'react-native-check-box';
 import React, {useState} from 'react';
+import { Component } from 'react';
+
+  export default class ToDoItem extends Component{
+
+    
 const [doneState, setDone] = useState(false);
 setDone(true);
 
+
+
 const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
   const [doneState, setDone] = useState(done);
+
   const onCheck = () => {
     setDone(!doneState);
-    db.ref('/interests').update({
+    firebase.database()
+    .ref('/todos').update({
       [id]: {
         todoItem: name,
         done: !doneState,
       },
     });
   };
+
   return (
     <View style={styles.todoItem}>
       <CheckBox
@@ -31,12 +42,14 @@ const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
         isChecked={doneState}
         disabled={doneState}
       />
+
       <Text style={[styles.todoText, {opacity: doneState ? 0.2 : 1}]}>
         {name}
       </Text>
     </View>
   );
 };
+}
 
 const styles = StyleSheet.create({
     todoItem: {
@@ -56,8 +69,3 @@ const styles = StyleSheet.create({
       textAlign: "center"
     },
   });
-  
-
- 
-
-  
