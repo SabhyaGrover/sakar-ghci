@@ -26,6 +26,7 @@ export default class todoo extends React.Component {
       .ref('/todos').on('value', querySnapShot => {
             let data = querySnapShot.val() ? querySnapShot.val() : {};
             let todoItems = {...data};
+            //console.log (todoItems)
             this.setState({
               todos: todoItems,
             });
@@ -35,14 +36,17 @@ export default class todoo extends React.Component {
         firebase.database()
         .ref('/todos').push({
             done: false,
-            todoItems: this.state.presentToDo,
+            todoItems : this.state.presentToDo,
+
 
           });
+
           Alert.alert('Action!', 'A new To-do item was created');
           this.setState({
             presentToDo: '',
           });
-          console.log(todoItems)
+          //console.log(this.state.presentToDo)
+          //console.log(todoItems)
     }
     clearTodos() {
         firebase.database()
@@ -75,7 +79,7 @@ export default class todoo extends React.Component {
             style={styles.textInput}
             onChangeText={presentToDo => {
               this.setState({presentToDo })
-            console.log({presentToDo})}}
+            }}
             onSubmitEditing = {this.addNewTodo}
           />
           <Button
