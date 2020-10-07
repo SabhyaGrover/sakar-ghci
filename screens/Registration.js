@@ -98,7 +98,7 @@ export default function Registration() {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onRegisterPress()}>
-                    <Text style={styles.buttonTitle}>Continue -> </Text>
+                    <Text style={styles.buttonTitle}>Continue  </Text>
                 </TouchableOpacity>
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Already got an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Log in</Text></Text>

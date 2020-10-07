@@ -101,7 +101,7 @@ function Profile(props) {
                     }}>
                     <Text style={styles.buttonTitle}>Log Out</Text>
                 </TouchableOpacity>
-        <Text style={{justifyContent:'center',marginBottom:0,marginTop:70}}>Developed with ❤️ | Team HobbyHacks </Text>
+        <Text style={{justifyContent:'center',marginBottom:0,marginTop:1}}>Developed with ❤️ | Team HobbyHacks </Text>
       </View>
 
   );

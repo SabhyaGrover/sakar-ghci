@@ -2,6 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { firebase } from './config'
+import { YellowBox } from 'react-native';
+import _ from 'lodash';
+
+YellowBox.ignoreWarnings(['Setting a timer']);
+const _console = _.clone(console);
+console.warn = message => {
+  if (message.indexOf('Setting a timer') <= -1) {
+    _console.warn(message);
+  }
+};
 //import * as GoogleSignIn from 'expo-google-sign-in';
 var provider = new firebase.auth.GoogleAuthProvider();
 export default function LoginScreen({navigation}) {
