@@ -1,4 +1,4 @@
-import ToDoItem from './ToDoItem';
+import ToDoItem from '../components/ToDoItem';
 
 import React, {Component} from 'react';
 import {
