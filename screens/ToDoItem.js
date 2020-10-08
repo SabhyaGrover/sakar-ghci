@@ -11,8 +11,7 @@ import {
 import CheckBox from 'react-native-check-box';
 import React, {useState} from 'react';
 import { Component } from 'react';
-
-
+import { firebase } from './config';
 
 
 //setDone(true);
