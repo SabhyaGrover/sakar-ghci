@@ -19,6 +19,18 @@ import { Component } from 'react';
 const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
   const [doneState, setDone] = useState(false);
 
+  const onCheck = () => {
+    //const [doneState, setDone] = useState(done);
+    setDone(!doneState);
+    firebase.database()
+    .ref('/todos').update({
+      [id]: {
+        todoItem: name,
+        done: !doneState,
+      },
+    });
+  };
+
   return (
     <View style={styles.todoItem}>
       <CheckBox
@@ -36,17 +48,7 @@ const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
 };
 
 
-const onCheck = () => {
-  const [doneState, setDone] = useState(done);
-  setDone(!doneState);
-  firebase.database()
-  .ref('/todos').update({
-    [id]: {
-      todoItem: name,
-      done: !doneState,
-    },
-  });
-};
+
 
 const styles = StyleSheet.create({
     todoItem: {
