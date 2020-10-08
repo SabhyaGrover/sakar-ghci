@@ -33,7 +33,7 @@ const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
   return (
     <View style={styles.todoItem}>
       <CheckBox
-        checkBoxColor="skyblue"
+        checkBoxColor="#9932CC"
         onClick={onCheck}
         isChecked={doneState}
         disabled={doneState}

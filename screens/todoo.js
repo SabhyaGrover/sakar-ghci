@@ -83,10 +83,10 @@ export default class todoo extends React.Component {
           <Button
             title="Add new To do item"
             onPress={this.addNewTodo}
-            color="lightgreen"
+            color="#9932CC"
           />
           <View style={{marginTop: 20}}>
-            <Button title="Clear todos" onPress={this.clearTodos} color="red" />
+            <Button title="Clear todos" onPress={this.clearTodos} color="#8B008B" />
           </View>
         </ScrollView>
       );
