@@ -10,11 +10,23 @@ import {
 import CheckBox from 'react-native-check-box';
 import React, {useState} from 'react';
 import { Component } from 'react';
-
+import {firebase} from '../screens/config';
 //setDone(true);
 const ToDoItem = ({todoItem: {todoItems, done}, id}) => {
   const [doneState, setDone] = useState(false)
-//  console.log({name})
+
+  const onCheck = () => {
+    //const [doneState, setDone] = useState(done);
+    setDone(!doneState);
+   // console.log(done);
+    firebase.database()
+    .ref('/todos').update({
+      [id]: {
+        todoItems: todoItems,
+        done: !doneState,
+      },
+    });
+  };
   return (
     <View style={styles.todoItem}>
       <CheckBox
@@ -33,18 +45,7 @@ const ToDoItem = ({todoItem: {todoItems, done}, id}) => {
 };
 
 
-const onCheck = () => {
-  const [doneState, setDone] = useState(done);
-  setDone(!doneState);
-  console.log(name);
-  firebase.database()
-  .ref('/todos').update({
-    [id]: {
-      todoItem: name,
-      done: !doneState,
-    },
-  });
-};
+
 
 const styles = StyleSheet.create({
     todoItem: {
