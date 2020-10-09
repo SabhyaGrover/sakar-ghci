@@ -8,6 +8,7 @@ import {
   FlatList,
   TextInput
 } from "react-native";
+import InterestChip from '../components/InterestChip';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import { firebase } from './config';
 function Interests({route}) {
