@@ -1,7 +1,7 @@
 import React, { useEffect, useState ,Component} from 'react';
 import {StyleSheet} from 'react-native';
 import todoo from './screens/todoo';
-import InterestChip from '../sakar-ghci/components/InterestChip';
+import InterestChip from './screens/InterestChip';
 import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
 import login from './screens/login';

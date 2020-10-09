@@ -1,25 +1,8 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import MaterialChipBasic from "../components/MaterialChipBasic";
+import * as React from 'react';
+import { Chip } from 'react-native-paper';
 
-function Untitled(props) {
-  return (
-    <View style={styles.container}>
-      <MaterialChipBasic style={styles.materialChipBasic}></MaterialChipBasic>
-    </View>
-  );
-}
+const MyComponent = () => (
+  <Chip icon="information" onPress={() => console.log('Pressed')}>Example Chip</Chip>
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  materialChipBasic: {
-    width: 138,
-    height: 32,
-    marginTop: 134,
-    marginLeft: 32
-  }
-});
-
-export default Untitled;
+export default MyComponent;
