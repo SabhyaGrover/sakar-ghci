@@ -37,7 +37,7 @@ export default class todoo extends React.Component {
         firebase.database()
         .ref('/todos').push({
             done: false,
-            todoItem: this.state.presentToDo,
+            todoItems: this.state.presentToDo,
           });
           Alert.alert('Action!', 'A new To-do item was created');
           this.setState({
