@@ -27,14 +27,16 @@ export default function Registration() {
         const data = {
             id: uid,
             email,
-            fullName,
         };
+        response.user.updateProfile({
+            displayName:fullName
+        })
         const usersRef = firebase.firestore().collection('users')
         usersRef
             .doc(uid)
             .set(data)
             .then(() => {
-                navigation.navigate('Interest', {screen:'Interest',params:{userData:data}})
+                navigation.navigate('Home', {screen:'Home',params:{userData:data}})
                 //console.log(data);
             })
             .catch((error) => {
@@ -44,6 +46,8 @@ export default function Registration() {
     .catch((error) => {
         alert(error)
 });
+
+
 }
 
 

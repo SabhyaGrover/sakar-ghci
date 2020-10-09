@@ -1,4 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
+import { firestore } from "firebase";
 import React, { Component } from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
@@ -6,13 +7,15 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialSlider1 from '../components/MaterialSlider1';
 import {firebase} from './config';
 
-
 function Profile(props) {
+  const email = firebase.auth().currentUser.email;
+  const name = firebase.auth().currentUser.displayName;
+  //console.log(name);
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
 
-        <View style={styles.imageColumn}>
+        <View >
           <FontAwesomeIcon
             name="user-circle"
             style={styles.icon}
@@ -26,38 +29,34 @@ function Profile(props) {
       <EntypoIcon name="star" style={styles.icon3}/>
       </View>
 
+      <View style={styles.imageColumnRow}>
+
       <View style ={styles.imageColumn}>
       <Text style={styles.username}>Username</Text>
-          <View style={styles.rect}>
-          <Text style={styles.Text}>Edit name</Text>
-        </View>
-        </View>
+      <Text style={styles.Text}>{name}</Text>
+      </View>
 
         <View style={styles.imageColumn}>
         <Text style={styles.username}>Email</Text>
-        <View style={styles.rect}>
-          <Text style={styles.Text}>Edit email</Text>
-        </View>
+        <Text style={styles.Text}>{email}</Text>
         </View>
 
+
         <View style ={styles.imageColumn}>
-      <Text style={styles.username}>Gender</Text>
-          <View style={styles.rect}>
-          <Text style={styles.Text}>Add Gender</Text>
-        </View>
+          <Text style={styles.username}>Gender</Text>
+          <Text style={styles.Text}>Gender</Text>
         </View>
 
         <View style ={styles.imageColumn}>
       <Text style={styles.username}>Age</Text>
-          <View style={styles.rect}>
-          <Text style={styles.Text}>Add age</Text>
-        </View>
+          <Text style={styles.Text}>Age</Text>
+
         </View>
 
         <View style ={styles.imageColumn}>
       <Text style={styles.username}>Region</Text>
-          <View style={styles.rect}>
-          <Text style={styles.Text}>Add Region</Text>
+          <Text style={styles.Text}>Region</Text>
+
         </View>
         </View>
         <View style = {{flexDirection:'column',marginTop:50,alignContent:'center'}}>
@@ -135,9 +134,8 @@ const styles = StyleSheet.create({
   },
   imageColumn: {
     width:'100%',
-    justifyContent:'space-evenly',
     alignItems:'center',
-    alignSelf:'center',
+    alignSelf:'flex-start',
     flexDirection:'row',
     marginTop:20
   },
@@ -149,11 +147,13 @@ const styles = StyleSheet.create({
   imageColumnRow: {
    flexDirection:'column',
    justifyContent:'space-around',
-   alignContent:'space-between'
+   alignContent:'space-around',
   },
   username: {
     color: "#121212",
     fontSize: 18,
+    textAlign:'center',
+    textAlignVertical:'center',
     marginTop:10,
     alignSelf:'flex-start'
   },
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     color: "rgba(128,128,128,1)",
     lineHeight: 35,
     fontSize: 19,
-    alignSelf:'center'
+    alignSelf:'flex-end'
   },
 
 });
