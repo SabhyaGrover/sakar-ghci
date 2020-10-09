@@ -9,33 +9,41 @@ import {
 } from 'react-native';
 import CheckBox from 'react-native-check-box';
 import React, {useState} from 'react';
-const [doneState, setDone] = useState(false);
-setDone(true);
+import { Component } from 'react';
 
-const ToDoItem = ({todoItem: {todoItem: name, done}, id}) => {
-  const [doneState, setDone] = useState(done);
-  const onCheck = () => {
-    setDone(!doneState);
-    db.ref('/interests').update({
-      [id]: {
-        todoItem: name,
-        done: !doneState,
-      },
-    });
-  };
+//setDone(true);
+const ToDoItem = ({todoItem: {todoItems, done}, id}) => {
+  const [doneState, setDone] = useState(false)
+//  console.log({name})
   return (
     <View style={styles.todoItem}>
       <CheckBox
-        checkBoxColor="skyblue"
+        checkBoxColor="#9932CC"
         onClick={onCheck}
         isChecked={doneState}
         disabled={doneState}
       />
+
       <Text style={[styles.todoText, {opacity: doneState ? 0.2 : 1}]}>
-        {name}
+      {todoItems}
       </Text>
+
     </View>
   );
+};
+
+
+const onCheck = () => {
+  const [doneState, setDone] = useState(done);
+  setDone(!doneState);
+  console.log(name);
+  firebase.database()
+  .ref('/todos').update({
+    [id]: {
+      todoItem: name,
+      done: !doneState,
+    },
+  });
 };
 
 const styles = StyleSheet.create({
@@ -50,14 +58,13 @@ const styles = StyleSheet.create({
       paddingHorizontal: 5,
       paddingVertical: 7,
       borderWidth: 1,
+
       borderRadius: 5,
+      color:'#121212',
       marginRight: 10,
       minWidth: "50%",
       textAlign: "center"
     },
   });
-  
 
- 
-
-  
+  export default ToDoItem

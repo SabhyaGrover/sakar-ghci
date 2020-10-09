@@ -28,6 +28,7 @@
     "expo-google-sign-in": "~8.2.1",
     "expo-notifications": "~0.3.3",
     "expo-permissions": "~9.0.1",
+    "expo-secure-store": "~9.0.1",
     "expo-status-bar": "^1.0.2",
     "firebase": "^7.9.0",
     "react": "~16.11.0",

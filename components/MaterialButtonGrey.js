@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, Text, useNavigation } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 function MaterialButtonGrey(props) {
-  
+  //const navigation = useNavigation();
   return (
     <TouchableOpacity style={[styles.container, props.style]} 
     >
@@ -11,7 +11,6 @@ function MaterialButtonGrey(props) {
     </TouchableOpacity>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#481480",

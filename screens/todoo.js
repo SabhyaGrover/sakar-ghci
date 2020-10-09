@@ -1,4 +1,5 @@
-import {db} from '../screens/config';
+import ToDoItem from '../components/ToDoItem';
+
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -12,26 +13,29 @@ import {
 import { firebase } from './config';
 
 export default class todoo extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        todos: {},
+
+      state = {
+        todos: [],
         presentToDo: '',
       };
-    }
-    componentDidMount() {
+
+    async componentDidMount() {
       
       firebase.database()
-      .ref('/todo').on('value', querySnapShot => {
+      .ref('/todos').on('value', querySnapShot => {
             let data = querySnapShot.val() ? querySnapShot.val() : {};
-            let todoItems = {...data};
+            let todoItem = {...data};
             this.setState({
-              todos: todoItems,
+              todos: todoItem,
             });
           });
+
+      //console.log(this.state.todos);
     }
-    addNewTodo() {
-        db.ref('/interests').push({
+
+    addNewTodo = () => {
+        firebase.database()
+        .ref('/todos').push({
             done: false,
             todoItem: this.state.presentToDo,
           });
@@ -39,10 +43,13 @@ export default class todoo extends React.Component {
           this.setState({
             presentToDo: '',
           });
+          //console.log(this.state.presentToDo)
     }
-    clearTodos() {
-        db.ref('/interests').remove();
-  
+
+    clearTodos=() => {
+        firebase.database()
+        .ref('/todos').remove();
+
     }
     render() {
         let todosKeys = Object.keys(this.state.todos);
@@ -50,6 +57,7 @@ export default class todoo extends React.Component {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainerStyle}>
+          
           <View>
   {todosKeys.length > 0 ? (
     todosKeys.map(key => (
@@ -65,22 +73,20 @@ export default class todoo extends React.Component {
 </View>
           <TextInput
             placeholder="Add new Todo"
-            value={this.state.presentToDo}
             style={styles.textInput}
-            onChangeText={e => {
-              this.setState({
-                presentToDo: e,
-              });
+            onChangeText={presentToDo => {
+              this.setState({presentToDo })
             }}
-            onSubmitEditing = {this.addNewTodo}
+            value={this.state.presentToDo}
           />
+
           <Button
             title="Add new To do item"
             onPress={this.addNewTodo}
-            color="lightgreen"
+            color="#9932CC"
           />
           <View style={{marginTop: 20}}>
-            <Button title="Clear todos" onPress={this.clearTodos} color="red" />
+            <Button title="Clear todos" onPress={this.clearTodos} color="#8B008B" />
           </View>
         </ScrollView>
       );
@@ -91,6 +97,7 @@ export default class todoo extends React.Component {
     container: {
       flex: 1,
       backgroundColor: 'white',
+      marginTop:100
     },
     contentContainerStyle: {
       alignItems: 'center',
@@ -120,5 +127,3 @@ export default class todoo extends React.Component {
       textAlign: 'center',
     },
   });
-  
- 
