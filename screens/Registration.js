@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image, Text, TextInput,StyleSheet, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { firebase } from '../screens/config';
 import { useNavigation} from '@react-navigation/native';
+import { Chip } from 'react-native-paper';
+
 
 export default function Registration() {
     const [fullName, setFullName] = useState('')
@@ -52,6 +54,30 @@ export default function Registration() {
 }
 
 
+const [selected, setSelected] = useState(false);
+const [textColor, setTextColor] = useState(`#FBA200`);
+const [style, setStyle] = useState({ borderColor: `#FBA200`, backgroundColor: `white` });
+
+useEffect(() => {
+    if (selected) {
+        setTextColor(`white`);
+        setStyle({ borderColor: `#FBA200`, backgroundColor: `#FBA200` });
+    } else {
+        setTextColor(`#FBA200`);
+        setStyle({ borderColor: `#FBA200`, backgroundColor: `transparent` });
+    }
+}, [selected]);
+
+const handlePress = () => {
+    setSelected(!selected);
+    if (chipPressed) {
+        chipPressed(selected);
+    }
+};
+
+    
+  
+
     return (
         <View style={styles.container}>
             <KeyboardAwareScrollView
@@ -100,6 +126,19 @@ export default function Registration() {
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
+                    <Text style={styles.footerText1}>What are you looking for? </Text>
+
+    <View style={{marginTop:10, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+
+
+    </View>
+
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onRegisterPress()}>
@@ -117,17 +156,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        marginTop:50
+        marginTop:10
     },
     title: {
 
     },
     logo: {
         flex: 1,
-        height: 200,
+        height: 190,
         width: '100%',
         alignSelf: "center",
-        margin: 30
+        margin: 10
     },
     input: {
         height: 48,
@@ -144,7 +183,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#8B008B',
         marginLeft: 30,
         marginRight: 30,
-        marginTop: 20,
+        marginTop: 40,
         height: 48,
         borderRadius: 5,
         alignItems: "center",
@@ -165,6 +204,13 @@ const styles = StyleSheet.create({
     footerText: {
         fontSize: 16,
         color: '#2e2e2d',
+        alignSelf:'stretch',
+        textAlign:'center'
+    },
+    footerText1: {
+        fontSize: 16,
+        color: 'blue',
+        marginTop: 20,
         alignSelf:'stretch',
         textAlign:'center'
     },
