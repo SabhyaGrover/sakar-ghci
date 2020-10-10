@@ -36,11 +36,7 @@ export default function Registration() {
             .doc(uid)
             .set(data)
             .then(() => {
-<<<<<<< HEAD
-                navigation.navigate('InterestChip', {screen:'InterestChip',params:{userData:data}})
-=======
                 navigation.navigate('Home', {screen:'Home',params:{userData:data}})
->>>>>>> 2039b0ac54f10cbbd5e59a6f9c9de4af73b5551b
                 //console.log(data);
             })
             .catch((error) => {
