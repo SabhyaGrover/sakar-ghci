@@ -134,7 +134,7 @@ const handlePress = () => {
     <Chip  onPress={() => console.log(rec.CP)}>Competitive Programming</Chip>
     <Chip  onPress={() => console.log(rec.AI)}>Artificial Intelligence</Chip>
     <Chip  onPress={() => console.log(rec.WebDeV)}>Web Development</Chip>
-    <Chip  onPress={() => console.log(rec.ioT)}>ioT</Chip>
+    <Chip  onPress={() => console.log(rec.ioT)}>IoT</Chip>
 
 
     </View>
