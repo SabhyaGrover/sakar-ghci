@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import MaterialChipBasic from "../components/MaterialChipBasic";
 
-function Untitled(props) {
+function InterestChip(props) {
   return (
     <View style={styles.container}>
       <MaterialChipBasic style={styles.materialChipBasic}></MaterialChipBasic>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Untitled;
+export default InterestChip;

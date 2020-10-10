@@ -1,7 +1,7 @@
 import React, { useEffect, useState ,Component} from 'react';
 import {StyleSheet} from 'react-native';
 import todoo from './screens/todoo';
-import Interests from './screens/Interests';
+import InterestChip from './screens/InterestChip';
 import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
 import login from './screens/login';
@@ -97,7 +97,7 @@ export default function App() {
 
       <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
       <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
-      <Stack.Screen name = 'Interest' component = { Interests }  options ={{headerShown:false}}/>
+      <Stack.Screen name = 'InterestChip' component = { InterestChip }  options ={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
 
