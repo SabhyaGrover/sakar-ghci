@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Text, TextInput,StyleSheet, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { firebase } from '../screens/config';
+import { firebase } from './config';
 import { useNavigation} from '@react-navigation/native';
-import { Chip } from 'react-native-paper';
-
-
+import {SelectableChips} from 'react-native-chip/SelectableChips';
+import {Chip} from 'react-native-paper';
 export default function Registration() {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const navigation = useNavigation();
+    var rec=[];
     const onFooterLinkPress = () => {
         navigation.navigate('Welcome to Sakar!')
     }
@@ -39,7 +39,7 @@ export default function Registration() {
             .set(data)
             .then(() => {
                 //changed routes
-                navigation.navigate('InterestChip', {screen:'InterestChip',params:{userData:data}})
+                navigation.navigate('Sakar', {userData:data})
                 //console.log(data);
             })
             .catch((error) => {
@@ -53,30 +53,13 @@ export default function Registration() {
 
 }
 
-
-const [selected, setSelected] = useState(false);
-const [textColor, setTextColor] = useState(`#FBA200`);
-const [style, setStyle] = useState({ borderColor: `#FBA200`, backgroundColor: `white` });
-
 useEffect(() => {
-    if (selected) {
-        setTextColor(`white`);
-        setStyle({ borderColor: `#FBA200`, backgroundColor: `#FBA200` });
-    } else {
-        setTextColor(`#FBA200`);
-        setStyle({ borderColor: `#FBA200`, backgroundColor: `transparent` });
-    }
-}, [selected]);
-
-const handlePress = () => {
-    setSelected(!selected);
-    if (chipPressed) {
-        chipPressed(selected);
-    }
-};
-
-    
-  
+    firebase.database()
+    .ref('interests')
+    .on('value',(snapshot) => {
+    rec = snapshot.val()
+    })
+});
 
     return (
         <View style={styles.container}>
@@ -126,19 +109,15 @@ const handlePress = () => {
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
-                    <Text style={styles.footerText1}>What are you looking for? </Text>
-
-    <View style={{marginTop:10, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
-    <Chip  onPress={() => console.log(rec.Basics)}>Basics</Chip>
-    <Chip  onPress={() => console.log(rec.AppDev)}>App Development</Chip>
-    <Chip  onPress={() => console.log(rec.CP)}>Competitive Programming</Chip>
-    <Chip  onPress={() => console.log(rec.AI)}>Artificial Intelligence</Chip>
-    <Chip  onPress={() => console.log(rec.WebDeV)}>Web Development</Chip>
-    <Chip  onPress={() => console.log(rec.ioT)}>ioT</Chip>
-
-
-    </View>
-
+                  <Text style={styles.footerText1}>What are you looking for? </Text>
+                <View style={{marginTop:10, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
+<Chip  onPress={() => console.log(rec.Basics)}>Basics</Chip>
+<Chip  onPress={() => console.log(rec.AppDev)}>App Development</Chip>
+<Chip  onPress={() => console.log(rec.CP)}>Competitive Programming</Chip>
+<Chip  onPress={() => console.log(rec.AI)}>Artificial Intelligence</Chip>
+<Chip  onPress={() => console.log(rec.WebDeV)}>Web Development</Chip>
+<Chip  onPress={() => console.log(rec.ioT)}>ioT</Chip>
+</View>
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onRegisterPress()}>
@@ -156,17 +135,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        marginTop:10
+        marginTop:50
     },
     title: {
 
     },
     logo: {
         flex: 1,
-        height: 190,
+        height: 200,
         width: '100%',
         alignSelf: "center",
-        margin: 10
+        margin: 30
     },
     input: {
         height: 48,
@@ -183,7 +162,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#8B008B',
         marginLeft: 30,
         marginRight: 30,
-        marginTop: 40,
+        marginTop: 20,
         height: 48,
         borderRadius: 5,
         alignItems: "center",
@@ -214,6 +193,7 @@ const styles = StyleSheet.create({
         alignSelf:'stretch',
         textAlign:'center'
     },
+    
     footerLink: {
         color: "#8B008B",
         fontWeight: "bold",

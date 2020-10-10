@@ -36,6 +36,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
     "react-native-auth0": "^2.6.0",
     "react-native-check-box": "^2.1.7",
+    "react-native-chip": "^2.1.8",
     "react-native-firebase": "^5.6.0",
     "react-native-gesture-handler": "~1.6.0",
     "react-native-grid-component": "^2.0.1",

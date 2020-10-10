@@ -4,13 +4,7 @@ import { Chip } from 'react-native-paper';
 import {firebase} from './config';
 
 export default function InterestChip(){
-var rec=[];
-firebase.database()
-.ref('interests')
-.on('value',(snapshot) => {
-    rec = snapshot.val()
-    //console.log(rec);
-})
+
   //add route back to home, with button
   return(
   <View style={{marginTop:100, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
