@@ -82,13 +82,11 @@ function Profile(props) {
         <MaterialSlider1 style={{alignSelf:'center'}}/>
         </View>
 
-        <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 5</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
-        </View>
+       
 
         </View>
         <TouchableOpacity
+        style={styles.button}
                     onPress={() => {
                       firebase.auth().signOut()
                       .then(
@@ -170,6 +168,31 @@ const styles = StyleSheet.create({
     lineHeight: 35,
     fontSize: 19,
     alignSelf:'flex-end'
+  },
+  button: {
+    backgroundColor: '#8B008B',
+    paddingLeft: 20,
+    paddingRight: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 20,
+    marginBottom:10,
+    height: 30,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+   
+  
+   
+    
+},
+  buttonTitle:{
+    color: 'white',
+    marginTop:-5,
+    fontSize: 16,
+    fontWeight: "bold",
+    alignSelf:'stretch',
+    textAlign:'center'
   },
 
 });
