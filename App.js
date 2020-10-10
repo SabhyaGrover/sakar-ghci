@@ -35,7 +35,7 @@ function Sakar(){
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
-          <Tab.Screen name='Leaderboard' component={ leaderboard } options={{
+          <Tab.Screen name='Leaderboard' component={ InterestChip } options={{
           tabBarLabel: 'Leaderboard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
@@ -51,7 +51,7 @@ function Sakar(){
     
   );
 }
-
+//change leaderboard route back to leaderboard
 
 export default function App() {
  
@@ -97,13 +97,12 @@ export default function App() {
 
       <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
       <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
-      <Stack.Screen name = 'InterestChip' component = { InterestChip }  options ={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
 
   );
 }
-
+//<Stack.Screen name = 'InterestChip' component = {InterestChip}  options ={{headerShown:false}}/>
 
 const styles = StyleSheet.create({
   icon: {

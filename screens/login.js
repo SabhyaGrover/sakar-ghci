@@ -51,8 +51,9 @@ export default function LoginScreen({navigation}) {
             })
     }
 
+    // OAuth Wip ---
 
-    const onGooglePress = () => {
+    /*const onGooglePress = () => {
         firebase.auth()
         .signInWithPopup(provider)
         .then(function(result)
@@ -67,6 +68,7 @@ export default function LoginScreen({navigation}) {
             var credential = error.credential;
         });
     }
+    */
 
     return (
         <View style={styles.container}>

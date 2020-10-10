@@ -6,6 +6,7 @@ function MaterialChipBasic(props) {
     <View style={[styles.container, props.style]}>
       <Text style={styles.python}>Python</Text>
     </View>
+    
   );
 }
 
