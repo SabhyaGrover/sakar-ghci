@@ -1,25 +1,19 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import MaterialChipBasic from "../components/MaterialChipBasic";
+import * as React from 'react';
+import {View } from 'react-native';
+import { Chip } from 'react-native-paper';
+import {firebase} from './config';
 
-function InterestChip(props) {
-  return (
-    <View style={styles.container}>
-      <MaterialChipBasic style={styles.materialChipBasic}></MaterialChipBasic>
-    </View>
-  );
+export default function InterestChip(){
+
+  //add route back to home, with button
+  return(
+  <View style={{marginTop:100, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
+  <Chip icon="information" onPress={() => console.log(rec.Basics)}>Basics</Chip>
+  <Chip icon="information" onPress={() => console.log(rec.AppDev)}>App Development</Chip>
+  <Chip icon="information" onPress={() => console.log(rec.CP)}>CP</Chip>
+  <Chip icon="information" onPress={() => console.log(rec.AI)}>AI</Chip>
+  <Chip icon="information" onPress={() => console.log(rec.WebDev)}>Web Development</Chip>
+  <Chip icon="information" onPress={() => console.log(rec.ioT)}>ioT</Chip>
+  </View>
+)
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  materialChipBasic: {
-    width: 138,
-    height: 32,
-    marginTop: 134,
-    marginLeft: 32
-  }
-});
-
-export default InterestChip;

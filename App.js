@@ -19,7 +19,6 @@ const Tab = createMaterialBottomTabNavigator()
 
 function Sakar(){
   return(
-
     <Tab.Navigator barStyle = {{ backgroundColor : '#481480' }}>
             <Tab.Screen
          name = 'Home' component = {Home} options={{
@@ -82,17 +81,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        { user?        (
+        { user?(
           <>
-          <Stack.Screen name = 'Sakar' component = {Sakar}  options ={{headerShown:false}}/>
+             <Stack.Screen name = 'Sakar' component = {Sakar}  options ={{headerShown:false}}/>
           </>
         ):
         (
-          <>
-           <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
+        <>
+        <Stack.Screen name= 'Registration' component={Registration}  options ={{headerShown:false}}/>
           </>
         )}
-
       <Stack.Screen name = 'Welcome to Sakar!' component = { login}  options ={{headerShown:false}}/>
       <Stack.Screen name = 'player' component = {player}  options ={{headerShown:false}}/>
         </Stack.Navigator>
