@@ -129,12 +129,12 @@ const handlePress = () => {
                     <Text style={styles.footerText1}>What are you looking for? </Text>
 
     <View style={{marginTop:10, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
-    <Chip  onPress={() => console.log('Pressed')}>Example Chip</Chip>
+    <Chip  onPress={() => console.log(rec.Basics)}>Basics</Chip>
+    <Chip  onPress={() => console.log(rec.AppDev)}>App Development</Chip>
+    <Chip  onPress={() => console.log(rec.CP)}>Competitive Programming</Chip>
+    <Chip  onPress={() => console.log(rec.AI)}>Artificial Intelligence</Chip>
+    <Chip  onPress={() => console.log(rec.WebDeV)}>Web Development</Chip>
+    <Chip  onPress={() => console.log(rec.ioT)}>ioT</Chip>
 
 
     </View>
