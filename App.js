@@ -1,7 +1,6 @@
 import React, { useEffect, useState ,Component} from 'react';
 import {StyleSheet} from 'react-native';
 import todoo from './screens/todoo';
-import InterestChip from './screens/InterestChip';
 import Home from './screens/Home';
 import leaderboard from './screens/leaderboard';
 import login from './screens/login';
@@ -35,7 +34,7 @@ function Sakar(){
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
-          <Tab.Screen name='Leaderboard' component={ InterestChip } options={{
+          <Tab.Screen name='Leaderboard' component={ Leaderboard } options={{
           tabBarLabel: 'Leaderboard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
@@ -51,7 +50,6 @@ function Sakar(){
     
   );
 }
-//change leaderboard route back to leaderboard
 
 export default function App() {
  
@@ -103,7 +101,6 @@ export default function App() {
 
   );
 }
-//<Stack.Screen name = 'InterestChip' component = {InterestChip}  options ={{headerShown:false}}/>
 
 const styles = StyleSheet.create({
   icon: {
