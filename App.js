@@ -34,7 +34,7 @@ function Sakar(){
                 <EvilIconsIcon name="pencil" style={styles.icon} color={tintColor} size={25} />
           )}}/>
 
-          <Tab.Screen name='Leaderboard' component={ Leaderboard } options={{
+          <Tab.Screen name='Leaderboard' component={ leaderboard } options={{
           tabBarLabel: 'Leaderboard',
           tabBarIcon: ({  tintColor }) => (
                 <EvilIconsIcon name="trophy" style={styles.icon} color={tintColor} size={25} />
