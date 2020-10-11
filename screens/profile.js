@@ -60,31 +60,33 @@ function Profile(props) {
         </View>
         </View>
         <View style = {{flexDirection:'column',marginTop:50,alignContent:'center'}}>
-      <Text style={{fontSize:20,fontWeight:'bold'}}>Course Progress</Text>
+          <View style={{alignItems:'center'}}>
+      <Text style={{fontSize:20,fontWeight:'bold',alignSelf:'stretch'}}>Course Progress</Text>
+      </View>
 
         <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 1</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        <Text style={styles.username}>Course 5</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}} value={0.3} />
         </View>
 
         <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 2</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        <Text style={styles.username}>Course 4</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}} value={0.5}/>
         </View>
 
         <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 3</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        <Text style={styles.username}>Course 3</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}} value={1}/>
         </View>
 
         <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 4</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        <Text style={styles.username}>Course 2</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}} value={0.7}/>
         </View>
 
         <View style={{flexDirection:'row'}}>
-        <Text style={styles.username}>Video 5</Text>
-        <MaterialSlider1 style={{alignSelf:'center'}}/>
+        <Text style={styles.username}>Course 1</Text>
+        <MaterialSlider1 style={{alignSelf:'center'}} value={0.8}/>
         </View>
 
         </View>
@@ -93,7 +95,7 @@ function Profile(props) {
                       firebase.auth().signOut()
                       .then(
                         () => {
-                        navigation.navigate('Welcome to Sakar!')
+                        navigation.navigate('Welcome to Sakar!',{screen:'Welcome to Sakar!'})
                         }
                         )
                       .catch( (error) => {alert(error)}  )
@@ -165,11 +167,11 @@ const styles = StyleSheet.create({
     alignContent:'center'
   },
   Text: {
-
+    marginLeft:30,
     color: "rgba(128,128,128,1)",
     lineHeight: 35,
-    fontSize: 19,
-    alignSelf:'flex-end'
+    fontSize: 18,
+
   },
 
 });

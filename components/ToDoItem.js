@@ -13,10 +13,10 @@ import { Component } from 'react';
 import {firebase} from '../screens/config';
 //setDone(true);
 const ToDoItem = ({todoItem: {todoItems, done}, id}) => {
-  const [doneState, setDone] = useState(false)
-
+  //const [doneState, setDone] = useState(false)
+  const [doneState, setDone] = useState(done);
   const onCheck = () => {
-    //const [doneState, setDone] = useState(done);
+
     setDone(!doneState);
    // console.log(done);
     firebase.database()

@@ -3,15 +3,24 @@ import { Image, Text, TextInput,StyleSheet, TouchableOpacity, View } from 'react
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { firebase } from './config';
 import { useNavigation} from '@react-navigation/native';
-import {SelectableChips} from 'react-native-chip/SelectableChips';
+//import {SelectableChips} from 'react-native-chip/SelectableChips';
 import {Chip} from 'react-native-paper';
 export default function Registration() {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [rec,setRec] = useState('');
     const navigation = useNavigation();
-    var rec=[];
+    useEffect(() => {
+    firebase.database()
+    .ref('interests')
+    .on('value',(snapshot) => {
+    setRec(snapshot.val())
+    console.log(rec);
+    })
+    });
+
     const onFooterLinkPress = () => {
         navigation.navigate('Welcome to Sakar!')
     }
@@ -54,11 +63,7 @@ export default function Registration() {
 }
 
 useEffect(() => {
-    firebase.database()
-    .ref('interests')
-    .on('value',(snapshot) => {
-    rec = snapshot.val()
-    })
+
 });
 
     return (
@@ -111,7 +116,7 @@ useEffect(() => {
                 />
                   <Text style={styles.footerText1}>What are you looking for? </Text>
                 <View style={{marginTop:10, flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
-<Chip  onPress={() => console.log(rec.Basics)}>Basics</Chip>
+<Chip  onPress={() => console.log({rec})}>Basics</Chip>
 <Chip  onPress={() => console.log(rec.AppDev)}>App Development</Chip>
 <Chip  onPress={() => console.log(rec.CP)}>Competitive Programming</Chip>
 <Chip  onPress={() => console.log(rec.AI)}>Artificial Intelligence</Chip>
