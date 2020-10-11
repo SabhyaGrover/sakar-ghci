@@ -19,7 +19,7 @@
 
 
 # GHCI Codeathon'20
-## Team-HobbyHacks
+## Team HobbyHacks
 
 
 
