@@ -35,11 +35,11 @@
   <p align="center">
   <b>#MakeYourDreamSakar</b>
     <br />
-    <a href="https://expo.io/@hobbyhacks/sakar">View Demo</a>
+    <a href="https://drive.google.com/file/d/1-4lZhw8M4vyk0mhsa-IsiUfA3FFfNqjx/view?usp=sharing">Demo Video</a>
     ·
     <a href="https://www.canva.com/design/DAEEf8oucD0/i_lWhFL7RlochasNVcZ9aQ/view?utm_content=DAEEf8oucD0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Presentation</a>
     ·
-    <a href="https://github.com/SabhyaGrover/sakar-ghci/issues">Request Feature</a>
+    <a href="https://drive.google.com/file/d/1DzAft1biAZGHgjeKuh9dn-_nIfsIxm_8/view?usp=sharing">Presentation Video</a>
   </p>
 </p>
 
