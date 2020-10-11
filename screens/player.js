@@ -35,7 +35,7 @@ const {title } = route.params.params
               style={styles.icon}
             /></Text>
 
-          <View style={styles.rect2}>
+<View style={styles.rect2}>
           <View style={styles.icon2Row}>
           <FontAwesomeIcon
               name="user-circle-o"
@@ -59,11 +59,29 @@ const {title } = route.params.params
             <View style={styles.column}>
               <Text style={styles.comments}>Concepts and Doubts</Text>
               <Text style={styles.loremIpsum}>
-                -Learning Resources{"\n"}-FAQ
+                -AMAs{"\n"}-FAQ
+              </Text>
+            </View>
+
+          </View>
+        </View>
+
+        <View style={styles.rect2}>
+          <View style={styles.icon2Row}>
+          <FontAwesomeIcon
+              name="user-circle-o"
+              style={styles.icon2}
+            />
+            <View style={styles.column}>
+              <Text style={styles.comments}>Learning Resources</Text>
+              <Text style={styles.loremIpsum}>
+                -Medium Articles{"\n"}-dev.io articles
               </Text>
             </View>
           </View>
         </View>
+
+
         </View>
         <View style={styles.materialUnderlineTextboxStack}>
           <MaterialUnderlineTextbox
@@ -115,7 +133,7 @@ const styles = StyleSheet.create({
   discussionForum: {
     color: "#121212",
     fontSize: 24,
-    marginTop: 7,
+    marginTop: 20,
     marginBottom:7,
 
   },

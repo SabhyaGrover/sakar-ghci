@@ -18,7 +18,7 @@ import { FlatList } from "react-native-gesture-handler";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 const axios = require('axios')
 const interest = ['web development','app development','machine learning','iot','data science']
-const API_KEY = `AIzaSyBU26UZzy0GRd30VTQC9_XtDhhTZR5cjUQ`;
+const API_KEY = ``;
 YellowBox.ignoreWarnings(['Encountered two children','Failed child context']);
 
 export default class Home extends Component {
